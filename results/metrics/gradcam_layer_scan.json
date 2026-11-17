@@ -1,0 +1,904 @@
+{
+  "provenance": {
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    }
+  },
+  "checkpoint_meta": {
+    "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+    "features": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "fold": 0,
+    "epoch": 9,
+    "val_dice": 0.729457809396354,
+    "threshold": 0.5,
+    "parameters_total": 22627875
+  },
+  "fold": 0,
+  "n_cases": 5,
+  "layers_scanned": [
+    "bottleneck",
+    "encoder.4",
+    "decoder.0",
+    "decoder.1",
+    "decoder.2",
+    "decoder.3"
+  ],
+  "ig_included": false,
+  "results": {
+    "bottleneck": {
+      "per_case": {
+        "BRATS_434.npy": {
+          "activation": {
+            "shape": [
+              1,
+              512,
+              4,
+              4,
+              4
+            ],
+            "max_abs": 6.964418391284671e-37,
+            "mean_abs": 1.5477939052132793e-37,
+            "exact_zero_fraction": 0.51171875
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 0.0,
+          "cam_mean": 0.0,
+          "cam_std": 0.0,
+          "degenerate": true,
+          "nonzero_fraction": 0.0
+        },
+        "BRATS_378.npy": {
+          "activation": {
+            "shape": [
+              1,
+              512,
+              4,
+              4,
+              4
+            ],
+            "max_abs": 6.964418391284671e-37,
+            "mean_abs": 1.5477939052132793e-37,
+            "exact_zero_fraction": 0.51171875
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 0.0,
+          "cam_mean": 0.0,
+          "cam_std": 0.0,
+          "degenerate": true,
+          "nonzero_fraction": 0.0
+        },
+        "BRATS_426.npy": {
+          "activation": {
+            "shape": [
+              1,
+              512,
+              4,
+              4,
+              4
+            ],
+            "max_abs": 6.964418391284671e-37,
+            "mean_abs": 1.5477939052132793e-37,
+            "exact_zero_fraction": 0.51171875
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 0.0,
+          "cam_mean": 0.0,
+          "cam_std": 0.0,
+          "degenerate": true,
+          "nonzero_fraction": 0.0
+        },
+        "BRATS_181.npy": {
+          "activation": {
+            "shape": [
+              1,
+              512,
+              4,
+              4,
+              4
+            ],
+            "max_abs": 6.964418391284671e-37,
+            "mean_abs": 1.5477939052132793e-37,
+            "exact_zero_fraction": 0.51171875
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 0.0,
+          "cam_mean": 0.0,
+          "cam_std": 0.0,
+          "degenerate": true,
+          "nonzero_fraction": 0.0
+        },
+        "BRATS_141.npy": {
+          "activation": {
+            "shape": [
+              1,
+              512,
+              4,
+              4,
+              4
+            ],
+            "max_abs": 6.964418391284671e-37,
+            "mean_abs": 1.5477939052132793e-37,
+            "exact_zero_fraction": 0.51171875
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 0.0,
+          "cam_mean": 0.0,
+          "cam_std": 0.0,
+          "degenerate": true,
+          "nonzero_fraction": 0.0
+        }
+      },
+      "summary": {
+        "n_cases": 5,
+        "degenerate_cases": 5,
+        "viable": false,
+        "activation_max_abs_mean": 0.0,
+        "mean_pearson_vs_vg": null,
+        "mean_pearson_vs_ig": null,
+        "errors": []
+      }
+    },
+    "encoder.4": {
+      "per_case": {
+        "BRATS_434.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 6.588210105895996,
+            "mean_abs": 0.26898902654647827,
+            "exact_zero_fraction": 0.5282669067382812
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.12321426618928243,
+          "cam_std": 0.1226952772066367,
+          "degenerate": false,
+          "nonzero_fraction": 0.9853515625,
+          "pearson_vs_vg": 0.365853513723707
+        },
+        "BRATS_378.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 7.92803430557251,
+            "mean_abs": 0.31566929817199707,
+            "exact_zero_fraction": 0.5139694213867188
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.018478700935571163,
+          "cam_std": 0.09806248840281116,
+          "degenerate": false,
+          "nonzero_fraction": 0.068603515625,
+          "pearson_vs_vg": -0.015222359596328464
+        },
+        "BRATS_426.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 8.517589569091797,
+            "mean_abs": 0.34170567989349365,
+            "exact_zero_fraction": 0.5470352172851562
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.012887708914046517,
+          "cam_std": 0.06311712630874267,
+          "degenerate": false,
+          "nonzero_fraction": 0.09765625,
+          "pearson_vs_vg": -0.02729739371901276
+        },
+        "BRATS_181.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 6.775039196014404,
+            "mean_abs": 0.3155302405357361,
+            "exact_zero_fraction": 0.5304641723632812
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.14183577095290528,
+          "cam_std": 0.1460663003740844,
+          "degenerate": false,
+          "nonzero_fraction": 0.966796875,
+          "pearson_vs_vg": 0.28103812208821094
+        },
+        "BRATS_141.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 3.1105616092681885,
+            "mean_abs": 0.21544517576694489,
+            "exact_zero_fraction": 0.5172576904296875
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.010467743208163634,
+          "cam_std": 0.05987837856670558,
+          "degenerate": false,
+          "nonzero_fraction": 0.0654296875,
+          "pearson_vs_vg": -0.009920444195025144
+        }
+      },
+      "summary": {
+        "n_cases": 5,
+        "degenerate_cases": 0,
+        "viable": true,
+        "activation_max_abs_mean": 6.583887,
+        "mean_pearson_vs_vg": 0.1189,
+        "mean_pearson_vs_ig": null,
+        "errors": []
+      }
+    },
+    "decoder.0": {
+      "per_case": {
+        "BRATS_434.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 12.798287391662598,
+            "mean_abs": 0.3779436945915222,
+            "exact_zero_fraction": 0.4542236328125
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.06319012758886047,
+          "cam_std": 0.09522493466683372,
+          "degenerate": false,
+          "nonzero_fraction": 0.822509765625,
+          "pearson_vs_vg": -0.06149270942890852
+        },
+        "BRATS_378.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 14.113412857055664,
+            "mean_abs": 0.49833863973617554,
+            "exact_zero_fraction": 0.4945068359375
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.07630789649250573,
+          "cam_std": 0.14424793304172986,
+          "degenerate": false,
+          "nonzero_fraction": 0.953125,
+          "pearson_vs_vg": -0.00780999388125996
+        },
+        "BRATS_426.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 16.583099365234375,
+            "mean_abs": 0.4962710738182068,
+            "exact_zero_fraction": 0.46402740478515625
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.07038446296490632,
+          "cam_std": 0.1486847724416835,
+          "degenerate": false,
+          "nonzero_fraction": 0.97607421875,
+          "pearson_vs_vg": 0.012676278252338054
+        },
+        "BRATS_181.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 14.116657257080078,
+            "mean_abs": 0.4570198059082031,
+            "exact_zero_fraction": 0.4539947509765625
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.06800596646582711,
+          "cam_std": 0.15010584353573264,
+          "degenerate": false,
+          "nonzero_fraction": 0.95654296875,
+          "pearson_vs_vg": 0.004314398401008358
+        },
+        "BRATS_141.npy": {
+          "activation": {
+            "shape": [
+              1,
+              256,
+              8,
+              8,
+              8
+            ],
+            "max_abs": 5.908837795257568,
+            "mean_abs": 0.27911466360092163,
+            "exact_zero_fraction": 0.45331573486328125
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.08288538671961654,
+          "cam_std": 0.1502803927833183,
+          "degenerate": false,
+          "nonzero_fraction": 0.949462890625,
+          "pearson_vs_vg": -0.05507181008331299
+        }
+      },
+      "summary": {
+        "n_cases": 5,
+        "degenerate_cases": 0,
+        "viable": true,
+        "activation_max_abs_mean": 12.704059,
+        "mean_pearson_vs_vg": -0.0215,
+        "mean_pearson_vs_ig": null,
+        "errors": []
+      }
+    },
+    "decoder.1": {
+      "per_case": {
+        "BRATS_434.npy": {
+          "activation": {
+            "shape": [
+              1,
+              128,
+              16,
+              16,
+              16
+            ],
+            "max_abs": 15.175487518310547,
+            "mean_abs": 0.2954305410385132,
+            "exact_zero_fraction": 0.2791900634765625
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.0767887701196771,
+          "cam_std": 0.08842367798400011,
+          "degenerate": false,
+          "nonzero_fraction": 0.8082275390625,
+          "pearson_vs_vg": -0.07854842508639834
+        },
+        "BRATS_378.npy": {
+          "activation": {
+            "shape": [
+              1,
+              128,
+              16,
+              16,
+              16
+            ],
+            "max_abs": 18.670129776000977,
+            "mean_abs": 0.3056306540966034,
+            "exact_zero_fraction": 0.2887992858886719
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.011750440952300495,
+          "cam_std": 0.06811072960895964,
+          "degenerate": false,
+          "nonzero_fraction": 0.0850830078125,
+          "pearson_vs_vg": 0.21277539316169453
+        },
+        "BRATS_426.npy": {
+          "activation": {
+            "shape": [
+              1,
+              128,
+              16,
+              16,
+              16
+            ],
+            "max_abs": 20.684326171875,
+            "mean_abs": 0.325687438249588,
+            "exact_zero_fraction": 0.3191947937011719
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.01213218487784287,
+          "cam_std": 0.0682589153792459,
+          "degenerate": false,
+          "nonzero_fraction": 0.085205078125,
+          "pearson_vs_vg": 0.44097237815253326
+        },
+        "BRATS_181.npy": {
+          "activation": {
+            "shape": [
+              1,
+              128,
+              16,
+              16,
+              16
+            ],
+            "max_abs": 18.811342239379883,
+            "mean_abs": 0.3132286071777344,
+            "exact_zero_fraction": 0.3177013397216797
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.02369783531832741,
+          "cam_std": 0.09787141873857509,
+          "degenerate": false,
+          "nonzero_fraction": 0.15380859375,
+          "pearson_vs_vg": 0.2441503784216141
+        },
+        "BRATS_141.npy": {
+          "activation": {
+            "shape": [
+              1,
+              128,
+              16,
+              16,
+              16
+            ],
+            "max_abs": 7.6848249435424805,
+            "mean_abs": 0.2750016152858734,
+            "exact_zero_fraction": 0.28905677795410156
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.03628856159185451,
+          "cam_std": 0.12124570955524548,
+          "degenerate": false,
+          "nonzero_fraction": 0.201416015625,
+          "pearson_vs_vg": 0.26175780379736413
+        }
+      },
+      "summary": {
+        "n_cases": 5,
+        "degenerate_cases": 0,
+        "viable": true,
+        "activation_max_abs_mean": 16.205222,
+        "mean_pearson_vs_vg": 0.2162,
+        "mean_pearson_vs_ig": null,
+        "errors": []
+      }
+    },
+    "decoder.2": {
+      "per_case": {
+        "BRATS_434.npy": {
+          "activation": {
+            "shape": [
+              1,
+              64,
+              32,
+              32,
+              32
+            ],
+            "max_abs": 32.983123779296875,
+            "mean_abs": 0.36513957381248474,
+            "exact_zero_fraction": 0.48972415924072266
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.07696925430494318,
+          "cam_std": 0.04543697177627342,
+          "degenerate": false,
+          "nonzero_fraction": 0.8903961181640625,
+          "pearson_vs_vg": -0.01111874527910272
+        },
+        "BRATS_378.npy": {
+          "activation": {
+            "shape": [
+              1,
+              64,
+              32,
+              32,
+              32
+            ],
+            "max_abs": 27.62002944946289,
+            "mean_abs": 0.37290430068969727,
+            "exact_zero_fraction": 0.48408985137939453
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.07846853828047172,
+          "cam_std": 0.055307599756537894,
+          "degenerate": false,
+          "nonzero_fraction": 0.9075736999511719,
+          "pearson_vs_vg": 0.24463236009995606
+        },
+        "BRATS_426.npy": {
+          "activation": {
+            "shape": [
+              1,
+              64,
+              32,
+              32,
+              32
+            ],
+            "max_abs": 25.474769592285156,
+            "mean_abs": 0.3642762005329132,
+            "exact_zero_fraction": 0.49794626235961914
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.07980151653805515,
+          "cam_std": 0.06304201810266555,
+          "degenerate": false,
+          "nonzero_fraction": 0.9395904541015625,
+          "pearson_vs_vg": 0.33473791143630016
+        },
+        "BRATS_181.npy": {
+          "activation": {
+            "shape": [
+              1,
+              64,
+              32,
+              32,
+              32
+            ],
+            "max_abs": 24.55315589904785,
+            "mean_abs": 0.3522348999977112,
+            "exact_zero_fraction": 0.49893951416015625
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.13758284208595628,
+          "cam_std": 0.08527245972969508,
+          "degenerate": false,
+          "nonzero_fraction": 0.91552734375,
+          "pearson_vs_vg": 0.0555021041063124
+        },
+        "BRATS_141.npy": {
+          "activation": {
+            "shape": [
+              1,
+              64,
+              32,
+              32,
+              32
+            ],
+            "max_abs": 8.010324478149414,
+            "mean_abs": 0.3456205725669861,
+            "exact_zero_fraction": 0.48476314544677734
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.1133822373149158,
+          "cam_std": 0.07590509001386665,
+          "degenerate": false,
+          "nonzero_fraction": 0.92529296875,
+          "pearson_vs_vg": 0.15427219813532364
+        }
+      },
+      "summary": {
+        "n_cases": 5,
+        "degenerate_cases": 0,
+        "viable": true,
+        "activation_max_abs_mean": 23.728281,
+        "mean_pearson_vs_vg": 0.1556,
+        "mean_pearson_vs_ig": null,
+        "errors": []
+      }
+    },
+    "decoder.3": {
+      "per_case": {
+        "BRATS_434.npy": {
+          "activation": {
+            "shape": [
+              1,
+              32,
+              64,
+              64,
+              64
+            ],
+            "max_abs": 40.963539123535156,
+            "mean_abs": 0.2456442266702652,
+            "exact_zero_fraction": 0.6523488759994507
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.1371941789361316,
+          "cam_std": 0.05706629701551242,
+          "degenerate": false,
+          "nonzero_fraction": 0.8857135772705078,
+          "pearson_vs_vg": -0.15196866363219605
+        },
+        "BRATS_378.npy": {
+          "activation": {
+            "shape": [
+              1,
+              32,
+              64,
+              64,
+              64
+            ],
+            "max_abs": 36.376625061035156,
+            "mean_abs": 0.26368069648742676,
+            "exact_zero_fraction": 0.6423604488372803
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.151707589748119,
+          "cam_std": 0.06938036557094802,
+          "degenerate": false,
+          "nonzero_fraction": 0.8599033355712891,
+          "pearson_vs_vg": -0.14881586312217504
+        },
+        "BRATS_426.npy": {
+          "activation": {
+            "shape": [
+              1,
+              32,
+              64,
+              64,
+              64
+            ],
+            "max_abs": 35.986122131347656,
+            "mean_abs": 0.2286175638437271,
+            "exact_zero_fraction": 0.6615748405456543
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.14143295235575443,
+          "cam_std": 0.05470672319651715,
+          "degenerate": false,
+          "nonzero_fraction": 0.9065208435058594,
+          "pearson_vs_vg": -0.20163151875194715
+        },
+        "BRATS_181.npy": {
+          "activation": {
+            "shape": [
+              1,
+              32,
+              64,
+              64,
+              64
+            ],
+            "max_abs": 36.61502456665039,
+            "mean_abs": 0.23158954083919525,
+            "exact_zero_fraction": 0.6561052799224854
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.2520413144722248,
+          "cam_std": 0.10053039000679036,
+          "degenerate": false,
+          "nonzero_fraction": 0.8902187347412109,
+          "pearson_vs_vg": -0.3089368902633569
+        },
+        "BRATS_141.npy": {
+          "activation": {
+            "shape": [
+              1,
+              32,
+              64,
+              64,
+              64
+            ],
+            "max_abs": 12.599031448364258,
+            "mean_abs": 0.23313196003437042,
+            "exact_zero_fraction": 0.649280309677124
+          },
+          "error": null,
+          "cam_shape": [
+            128,
+            128,
+            128
+          ],
+          "cam_max": 1.0,
+          "cam_mean": 0.2515596586027984,
+          "cam_std": 0.10723413128900632,
+          "degenerate": false,
+          "nonzero_fraction": 0.8768768310546875,
+          "pearson_vs_vg": -0.14622979668822433
+        }
+      },
+      "summary": {
+        "n_cases": 5,
+        "degenerate_cases": 0,
+        "viable": true,
+        "activation_max_abs_mean": 32.508068,
+        "mean_pearson_vs_vg": -0.1915,
+        "mean_pearson_vs_ig": null,
+        "errors": []
+      }
+    }
+  },
+  "elapsed_min": 6.7,
+  "interpretation": "'bottleneck' is the control and should be degenerate, because that stage emits a denormal constant. Any layer with viable=true and activations of normal magnitude can support a Grad-CAM map, which would mean the method was never broken -- only pointed at a dead layer. Agreement with VG and IG is context, not a correctness test: Grad-CAM is computed at lower spatial resolution and answers a different question, so moderate rather than high agreement is the expectation."
+}

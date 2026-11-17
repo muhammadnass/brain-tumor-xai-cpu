@@ -1,0 +1,1365 @@
+{
+  "provenance": {
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    }
+  },
+  "checkpoint_meta": {
+    "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+    "features": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "fold": 0,
+    "epoch": 9,
+    "val_dice": 0.729457809396354,
+    "threshold": 0.5,
+    "parameters_total": 22627875
+  },
+  "fold": 0,
+  "cache": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/cache_128",
+  "reference": "/home/muhammad-sanusi/neurosurgery-xai-planning/results/metrics/cross_population.json",
+  "n_compared": 162,
+  "n_reference_for_fold": 162,
+  "cases_without_reference": [],
+  "tolerance": 0.0001,
+  "max_abs_deviation": 0.0,
+  "mean_abs_deviation": 0.0,
+  "median_abs_deviation": 0.0,
+  "worst_case": {
+    "case": "BRATS_434.npy",
+    "dice_recomputed": 0.8132329520770137,
+    "dice_recorded": 0.8132329520770137,
+    "abs_deviation": 0.0,
+    "gt_voxels_recomputed": 6341,
+    "gt_voxels_recorded": 6341
+  },
+  "deviation_bands": {
+    "exceeding_1e-9": 0,
+    "exceeding_1e-7": 0,
+    "exceeding_1e-6": 0,
+    "exceeding_1e-4": 0,
+    "exceeding_1e-3": 0
+  },
+  "ground_truth_voxel_mismatches": 0,
+  "ground_truth_voxel_mismatch_examples": [],
+  "mean_dice_recomputed": 0.7294578093953182,
+  "mean_dice_recorded": 0.7294578093953182,
+  "passed": true,
+  "per_case": [
+    {
+      "case": "BRATS_434.npy",
+      "dice_recomputed": 0.8132329520770137,
+      "dice_recorded": 0.8132329520770137,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6341,
+      "gt_voxels_recorded": 6341
+    },
+    {
+      "case": "BRATS_378.npy",
+      "dice_recomputed": 0.8247052793433978,
+      "dice_recorded": 0.8247052793433978,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6479,
+      "gt_voxels_recorded": 6479
+    },
+    {
+      "case": "BRATS_426.npy",
+      "dice_recomputed": 0.8133915735926094,
+      "dice_recorded": 0.8133915735926094,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 14724,
+      "gt_voxels_recorded": 14724
+    },
+    {
+      "case": "BRATS_181.npy",
+      "dice_recomputed": 0.6636993576448679,
+      "dice_recorded": 0.6636993576448679,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13272,
+      "gt_voxels_recorded": 13272
+    },
+    {
+      "case": "BRATS_141.npy",
+      "dice_recomputed": 0.882053483807384,
+      "dice_recorded": 0.882053483807384,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17419,
+      "gt_voxels_recorded": 17419
+    },
+    {
+      "case": "BRATS_184.npy",
+      "dice_recomputed": 0.2436974789906658,
+      "dice_recorded": 0.2436974789906658,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2245,
+      "gt_voxels_recorded": 2245
+    },
+    {
+      "case": "BRATS_227.npy",
+      "dice_recomputed": 0.760311238518247,
+      "dice_recorded": 0.760311238518247,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 7275,
+      "gt_voxels_recorded": 7275
+    },
+    {
+      "case": "BRATS_296.npy",
+      "dice_recomputed": 0.6169378389648585,
+      "dice_recorded": 0.6169378389648585,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3697,
+      "gt_voxels_recorded": 3697
+    },
+    {
+      "case": "BRATS_046.npy",
+      "dice_recomputed": 0.9598312423668348,
+      "dice_recorded": 0.9598312423668348,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 22496,
+      "gt_voxels_recorded": 22496
+    },
+    {
+      "case": "BRATS_282.npy",
+      "dice_recomputed": 0.4437716262972579,
+      "dice_recorded": 0.4437716262972579,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10630,
+      "gt_voxels_recorded": 10630
+    },
+    {
+      "case": "BRATS_169.npy",
+      "dice_recomputed": 0.023723361479670562,
+      "dice_recorded": 0.023723361479670562,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9830,
+      "gt_voxels_recorded": 9830
+    },
+    {
+      "case": "BRATS_139.npy",
+      "dice_recomputed": 0.797793671959754,
+      "dice_recorded": 0.797793671959754,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9310,
+      "gt_voxels_recorded": 9310
+    },
+    {
+      "case": "BRATS_464.npy",
+      "dice_recomputed": 0.8461812003631727,
+      "dice_recorded": 0.8461812003631727,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13339,
+      "gt_voxels_recorded": 13339
+    },
+    {
+      "case": "BRATS_451.npy",
+      "dice_recomputed": 0.8544109808099498,
+      "dice_recorded": 0.8544109808099498,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13218,
+      "gt_voxels_recorded": 13218
+    },
+    {
+      "case": "BRATS_204.npy",
+      "dice_recomputed": 0.8340277777772951,
+      "dice_recorded": 0.8340277777772951,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 7587,
+      "gt_voxels_recorded": 7587
+    },
+    {
+      "case": "BRATS_233.npy",
+      "dice_recomputed": 0.6648712337979046,
+      "dice_recorded": 0.6648712337979046,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3073,
+      "gt_voxels_recorded": 3073
+    },
+    {
+      "case": "BRATS_199.npy",
+      "dice_recomputed": 0.6153846153839362,
+      "dice_recorded": 0.6153846153839362,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6162,
+      "gt_voxels_recorded": 6162
+    },
+    {
+      "case": "BRATS_056.npy",
+      "dice_recomputed": 0.8930974333405269,
+      "dice_recorded": 0.8930974333405269,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3981,
+      "gt_voxels_recorded": 3981
+    },
+    {
+      "case": "BRATS_034.npy",
+      "dice_recomputed": 0.7728238772868294,
+      "dice_recorded": 0.7728238772868294,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 25750,
+      "gt_voxels_recorded": 25750
+    },
+    {
+      "case": "BRATS_244.npy",
+      "dice_recomputed": 0.8924939227065307,
+      "dice_recorded": 0.8924939227065307,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 20712,
+      "gt_voxels_recorded": 20712
+    },
+    {
+      "case": "BRATS_235.npy",
+      "dice_recomputed": 0.8709848685953141,
+      "dice_recorded": 0.8709848685953141,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10632,
+      "gt_voxels_recorded": 10632
+    },
+    {
+      "case": "BRATS_021.npy",
+      "dice_recomputed": 0.6453473132367986,
+      "dice_recorded": 0.6453473132367986,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9085,
+      "gt_voxels_recorded": 9085
+    },
+    {
+      "case": "BRATS_443.npy",
+      "dice_recomputed": 0.9010910391684831,
+      "dice_recorded": 0.9010910391684831,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2763,
+      "gt_voxels_recorded": 2763
+    },
+    {
+      "case": "BRATS_160.npy",
+      "dice_recomputed": 0.863379458193601,
+      "dice_recorded": 0.863379458193601,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2840,
+      "gt_voxels_recorded": 2840
+    },
+    {
+      "case": "BRATS_320.npy",
+      "dice_recomputed": 0.7200830192797422,
+      "dice_recorded": 0.7200830192797422,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8057,
+      "gt_voxels_recorded": 8057
+    },
+    {
+      "case": "BRATS_422.npy",
+      "dice_recomputed": 0.9404691442631256,
+      "dice_recorded": 0.9404691442631256,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15841,
+      "gt_voxels_recorded": 15841
+    },
+    {
+      "case": "BRATS_413.npy",
+      "dice_recomputed": 0.8766584766541689,
+      "dice_recorded": 0.8766584766541689,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1123,
+      "gt_voxels_recorded": 1123
+    },
+    {
+      "case": "BRATS_270.npy",
+      "dice_recomputed": 0.5559821839954601,
+      "dice_recorded": 0.5559821839954601,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4113,
+      "gt_voxels_recorded": 4113
+    },
+    {
+      "case": "BRATS_281.npy",
+      "dice_recomputed": 0.7325154926010291,
+      "dice_recorded": 0.7325154926010291,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6007,
+      "gt_voxels_recorded": 6007
+    },
+    {
+      "case": "BRATS_179.npy",
+      "dice_recomputed": 0.764534883715374,
+      "dice_recorded": 0.764534883715374,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 776,
+      "gt_voxels_recorded": 776
+    },
+    {
+      "case": "BRATS_245.npy",
+      "dice_recomputed": 0.6790707915879345,
+      "dice_recorded": 0.6790707915879345,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5222,
+      "gt_voxels_recorded": 5222
+    },
+    {
+      "case": "BRATS_078.npy",
+      "dice_recomputed": 0.4676082862519137,
+      "dice_recorded": 0.4676082862519137,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2940,
+      "gt_voxels_recorded": 2940
+    },
+    {
+      "case": "BRATS_205.npy",
+      "dice_recomputed": 0.9132016392683551,
+      "dice_recorded": 0.9132016392683551,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10841,
+      "gt_voxels_recorded": 10841
+    },
+    {
+      "case": "BRATS_027.npy",
+      "dice_recomputed": 0.672818146865943,
+      "dice_recorded": 0.672818146865943,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6744,
+      "gt_voxels_recorded": 6744
+    },
+    {
+      "case": "BRATS_430.npy",
+      "dice_recomputed": 0.7060634041221728,
+      "dice_recorded": 0.7060634041221728,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1970,
+      "gt_voxels_recorded": 1970
+    },
+    {
+      "case": "BRATS_383.npy",
+      "dice_recomputed": 0.9293300865237736,
+      "dice_recorded": 0.9293300865237736,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 19685,
+      "gt_voxels_recorded": 19685
+    },
+    {
+      "case": "BRATS_329.npy",
+      "dice_recomputed": 0.7956218334763427,
+      "dice_recorded": 0.7956218334763427,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 11177,
+      "gt_voxels_recorded": 11177
+    },
+    {
+      "case": "BRATS_412.npy",
+      "dice_recomputed": 0.8714250103862283,
+      "dice_recorded": 0.8714250103862283,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 29583,
+      "gt_voxels_recorded": 29583
+    },
+    {
+      "case": "BRATS_403.npy",
+      "dice_recomputed": 0.6817351434607294,
+      "dice_recorded": 0.6817351434607294,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 16450,
+      "gt_voxels_recorded": 16450
+    },
+    {
+      "case": "BRATS_351.npy",
+      "dice_recomputed": 0.7297809034342307,
+      "dice_recorded": 0.7297809034342307,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2748,
+      "gt_voxels_recorded": 2748
+    },
+    {
+      "case": "BRATS_051.npy",
+      "dice_recomputed": 0.9204373071083745,
+      "dice_recorded": 0.9204373071083745,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8959,
+      "gt_voxels_recorded": 8959
+    },
+    {
+      "case": "BRATS_358.npy",
+      "dice_recomputed": 0.8629882925695889,
+      "dice_recorded": 0.8629882925695889,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 18749,
+      "gt_voxels_recorded": 18749
+    },
+    {
+      "case": "BRATS_284.npy",
+      "dice_recomputed": 0.6903073286049711,
+      "dice_recorded": 0.6903073286049711,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17630,
+      "gt_voxels_recorded": 17630
+    },
+    {
+      "case": "BRATS_243.npy",
+      "dice_recomputed": 0.33354186216227005,
+      "dice_recorded": 0.33354186216227005,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15974,
+      "gt_voxels_recorded": 15974
+    },
+    {
+      "case": "BRATS_339.npy",
+      "dice_recomputed": 0.9068618741335038,
+      "dice_recorded": 0.9068618741335038,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13101,
+      "gt_voxels_recorded": 13101
+    },
+    {
+      "case": "BRATS_102.npy",
+      "dice_recomputed": 0.8136820925542405,
+      "dice_recorded": 0.8136820925542405,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3987,
+      "gt_voxels_recorded": 3987
+    },
+    {
+      "case": "BRATS_203.npy",
+      "dice_recomputed": 0.8349280494230129,
+      "dice_recorded": 0.8349280494230129,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6240,
+      "gt_voxels_recorded": 6240
+    },
+    {
+      "case": "BRATS_165.npy",
+      "dice_recomputed": 0.8881563456547112,
+      "dice_recorded": 0.8881563456547112,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4077,
+      "gt_voxels_recorded": 4077
+    },
+    {
+      "case": "BRATS_346.npy",
+      "dice_recomputed": 0.8494953927151716,
+      "dice_recorded": 0.8494953927151716,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3923,
+      "gt_voxels_recorded": 3923
+    },
+    {
+      "case": "BRATS_009.npy",
+      "dice_recomputed": 0.7262707901941332,
+      "dice_recorded": 0.7262707901941332,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17950,
+      "gt_voxels_recorded": 17950
+    },
+    {
+      "case": "BRATS_401.npy",
+      "dice_recomputed": 0.6701602959288836,
+      "dice_recorded": 0.6701602959288836,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1099,
+      "gt_voxels_recorded": 1099
+    },
+    {
+      "case": "BRATS_193.npy",
+      "dice_recomputed": 0.9444444444441006,
+      "dice_recorded": 0.9444444444441006,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13137,
+      "gt_voxels_recorded": 13137
+    },
+    {
+      "case": "BRATS_223.npy",
+      "dice_recomputed": 0.6743657042866691,
+      "dice_recorded": 0.6743657042866691,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 14591,
+      "gt_voxels_recorded": 14591
+    },
+    {
+      "case": "BRATS_180.npy",
+      "dice_recomputed": 0.7485709930639824,
+      "dice_recorded": 0.7485709930639824,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8015,
+      "gt_voxels_recorded": 8015
+    },
+    {
+      "case": "BRATS_105.npy",
+      "dice_recomputed": 0.7764785059301955,
+      "dice_recorded": 0.7764785059301955,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5821,
+      "gt_voxels_recorded": 5821
+    },
+    {
+      "case": "BRATS_345.npy",
+      "dice_recomputed": 0.8153633491303165,
+      "dice_recorded": 0.8153633491303165,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4154,
+      "gt_voxels_recorded": 4154
+    },
+    {
+      "case": "BRATS_472.npy",
+      "dice_recomputed": 0.8950276243089966,
+      "dice_recorded": 0.8950276243089966,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10552,
+      "gt_voxels_recorded": 10552
+    },
+    {
+      "case": "BRATS_025.npy",
+      "dice_recomputed": 0.4906089926000937,
+      "dice_recorded": 0.4906089926000937,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3968,
+      "gt_voxels_recorded": 3968
+    },
+    {
+      "case": "BRATS_394.npy",
+      "dice_recomputed": 0.9158469006396684,
+      "dice_recorded": 0.9158469006396684,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 11291,
+      "gt_voxels_recorded": 11291
+    },
+    {
+      "case": "BRATS_344.npy",
+      "dice_recomputed": 0.9057569296372295,
+      "dice_recorded": 0.9057569296372295,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15889,
+      "gt_voxels_recorded": 15889
+    },
+    {
+      "case": "BRATS_057.npy",
+      "dice_recomputed": 0.8942044057852943,
+      "dice_recorded": 0.8942044057852943,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5433,
+      "gt_voxels_recorded": 5433
+    },
+    {
+      "case": "BRATS_163.npy",
+      "dice_recomputed": 0.529253952850888,
+      "dice_recorded": 0.529253952850888,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 12798,
+      "gt_voxels_recorded": 12798
+    },
+    {
+      "case": "BRATS_194.npy",
+      "dice_recomputed": 0.5367394588648032,
+      "dice_recorded": 0.5367394588648032,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3980,
+      "gt_voxels_recorded": 3980
+    },
+    {
+      "case": "BRATS_475.npy",
+      "dice_recomputed": 0.9132614994879821,
+      "dice_recorded": 0.9132614994879821,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 27241,
+      "gt_voxels_recorded": 27241
+    },
+    {
+      "case": "BRATS_004.npy",
+      "dice_recomputed": 0.690350935606083,
+      "dice_recorded": 0.690350935606083,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17630,
+      "gt_voxels_recorded": 17630
+    },
+    {
+      "case": "BRATS_392.npy",
+      "dice_recomputed": 0.91087403721932,
+      "dice_recorded": 0.91087403721932,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 19267,
+      "gt_voxels_recorded": 19267
+    },
+    {
+      "case": "BRATS_332.npy",
+      "dice_recomputed": 0.7642099225691057,
+      "dice_recorded": 0.7642099225691057,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8720,
+      "gt_voxels_recorded": 8720
+    },
+    {
+      "case": "BRATS_283.npy",
+      "dice_recomputed": 0.835563765220184,
+      "dice_recorded": 0.835563765220184,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 25030,
+      "gt_voxels_recorded": 25030
+    },
+    {
+      "case": "BRATS_048.npy",
+      "dice_recomputed": 0.9058277247347494,
+      "dice_recorded": 0.9058277247347494,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8804,
+      "gt_voxels_recorded": 8804
+    },
+    {
+      "case": "BRATS_128.npy",
+      "dice_recomputed": 0.0,
+      "dice_recorded": 0.0,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2365,
+      "gt_voxels_recorded": 2365
+    },
+    {
+      "case": "BRATS_028.npy",
+      "dice_recomputed": 0.17053061799720207,
+      "dice_recorded": 0.17053061799720207,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 12981,
+      "gt_voxels_recorded": 12981
+    },
+    {
+      "case": "BRATS_406.npy",
+      "dice_recomputed": 0.8138129496379459,
+      "dice_recorded": 0.8138129496379459,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2029,
+      "gt_voxels_recorded": 2029
+    },
+    {
+      "case": "BRATS_338.npy",
+      "dice_recomputed": 0.6303724928276451,
+      "dice_recorded": 0.6303724928276451,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 417,
+      "gt_voxels_recorded": 417
+    },
+    {
+      "case": "BRATS_247.npy",
+      "dice_recomputed": 0.7802766538056081,
+      "dice_recorded": 0.7802766538056081,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6168,
+      "gt_voxels_recorded": 6168
+    },
+    {
+      "case": "BRATS_236.npy",
+      "dice_recomputed": 0.7263023446762492,
+      "dice_recorded": 0.7263023446762492,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9470,
+      "gt_voxels_recorded": 9470
+    },
+    {
+      "case": "BRATS_402.npy",
+      "dice_recomputed": 0.8851076645070244,
+      "dice_recorded": 0.8851076645070244,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3115,
+      "gt_voxels_recorded": 3115
+    },
+    {
+      "case": "BRATS_090.npy",
+      "dice_recomputed": 0.69484136594733,
+      "dice_recorded": 0.69484136594733,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5299,
+      "gt_voxels_recorded": 5299
+    },
+    {
+      "case": "BRATS_120.npy",
+      "dice_recomputed": 0.4416814683235807,
+      "dice_recorded": 0.4416814683235807,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3876,
+      "gt_voxels_recorded": 3876
+    },
+    {
+      "case": "BRATS_197.npy",
+      "dice_recomputed": 0.3284683239772827,
+      "dice_recorded": 0.3284683239772827,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9998,
+      "gt_voxels_recorded": 9998
+    },
+    {
+      "case": "BRATS_135.npy",
+      "dice_recomputed": 0.7071619504098501,
+      "dice_recorded": 0.7071619504098501,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 12011,
+      "gt_voxels_recorded": 12011
+    },
+    {
+      "case": "BRATS_260.npy",
+      "dice_recomputed": 0.7968908414998336,
+      "dice_recorded": 0.7968908414998336,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4820,
+      "gt_voxels_recorded": 4820
+    },
+    {
+      "case": "BRATS_109.npy",
+      "dice_recomputed": 0.8823319027176428,
+      "dice_recorded": 0.8823319027176428,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8847,
+      "gt_voxels_recorded": 8847
+    },
+    {
+      "case": "BRATS_242.npy",
+      "dice_recomputed": 0.9231907988382044,
+      "dice_recorded": 0.9231907988382044,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17509,
+      "gt_voxels_recorded": 17509
+    },
+    {
+      "case": "BRATS_398.npy",
+      "dice_recomputed": 0.46930870083397697,
+      "dice_recorded": 0.46930870083397697,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8739,
+      "gt_voxels_recorded": 8739
+    },
+    {
+      "case": "BRATS_008.npy",
+      "dice_recomputed": 0.6875928867932436,
+      "dice_recorded": 0.6875928867932436,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13485,
+      "gt_voxels_recorded": 13485
+    },
+    {
+      "case": "BRATS_349.npy",
+      "dice_recomputed": 0.7132852513842235,
+      "dice_recorded": 0.7132852513842235,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3486,
+      "gt_voxels_recorded": 3486
+    },
+    {
+      "case": "BRATS_234.npy",
+      "dice_recomputed": 0.9088592109282756,
+      "dice_recorded": 0.9088592109282756,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9029,
+      "gt_voxels_recorded": 9029
+    },
+    {
+      "case": "BRATS_076.npy",
+      "dice_recomputed": 0.8292780672122204,
+      "dice_recorded": 0.8292780672122204,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 19650,
+      "gt_voxels_recorded": 19650
+    },
+    {
+      "case": "BRATS_166.npy",
+      "dice_recomputed": 0.9007704380079538,
+      "dice_recorded": 0.9007704380079538,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 12816,
+      "gt_voxels_recorded": 12816
+    },
+    {
+      "case": "BRATS_150.npy",
+      "dice_recomputed": 0.40812077043135847,
+      "dice_recorded": 0.40812077043135847,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4483,
+      "gt_voxels_recorded": 4483
+    },
+    {
+      "case": "BRATS_439.npy",
+      "dice_recomputed": 0.35834327225395296,
+      "dice_recorded": 0.35834327225395296,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3911,
+      "gt_voxels_recorded": 3911
+    },
+    {
+      "case": "BRATS_455.npy",
+      "dice_recomputed": 0.6998928863961313,
+      "dice_recorded": 0.6998928863961313,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6205,
+      "gt_voxels_recorded": 6205
+    },
+    {
+      "case": "BRATS_216.npy",
+      "dice_recomputed": 0.7980121833908336,
+      "dice_recorded": 0.7980121833908336,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3517,
+      "gt_voxels_recorded": 3517
+    },
+    {
+      "case": "BRATS_159.npy",
+      "dice_recomputed": 0.9276695080108486,
+      "dice_recorded": 0.9276695080108486,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13562,
+      "gt_voxels_recorded": 13562
+    },
+    {
+      "case": "BRATS_463.npy",
+      "dice_recomputed": 0.932971639950218,
+      "dice_recorded": 0.932971639950218,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9685,
+      "gt_voxels_recorded": 9685
+    },
+    {
+      "case": "BRATS_264.npy",
+      "dice_recomputed": 0.8675733715072743,
+      "dice_recorded": 0.8675733715072743,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1361,
+      "gt_voxels_recorded": 1361
+    },
+    {
+      "case": "BRATS_423.npy",
+      "dice_recomputed": 0.8113546881831472,
+      "dice_recorded": 0.8113546881831472,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8392,
+      "gt_voxels_recorded": 8392
+    },
+    {
+      "case": "BRATS_089.npy",
+      "dice_recomputed": 0.9231384307841464,
+      "dice_recorded": 0.9231384307841464,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10112,
+      "gt_voxels_recorded": 10112
+    },
+    {
+      "case": "BRATS_249.npy",
+      "dice_recomputed": 0.8014407092721091,
+      "dice_recorded": 0.8014407092721091,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 25155,
+      "gt_voxels_recorded": 25155
+    },
+    {
+      "case": "BRATS_380.npy",
+      "dice_recomputed": 0.0,
+      "dice_recorded": 0.0,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 119,
+      "gt_voxels_recorded": 119
+    },
+    {
+      "case": "BRATS_277.npy",
+      "dice_recomputed": 0.726149530837571,
+      "dice_recorded": 0.726149530837571,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17955,
+      "gt_voxels_recorded": 17955
+    },
+    {
+      "case": "BRATS_208.npy",
+      "dice_recomputed": 0.9065084893334204,
+      "dice_recorded": 0.9065084893334204,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9158,
+      "gt_voxels_recorded": 9158
+    },
+    {
+      "case": "BRATS_113.npy",
+      "dice_recomputed": 0.9440191538288932,
+      "dice_recorded": 0.9440191538288932,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15483,
+      "gt_voxels_recorded": 15483
+    },
+    {
+      "case": "BRATS_012.npy",
+      "dice_recomputed": 0.0,
+      "dice_recorded": 0.0,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2121,
+      "gt_voxels_recorded": 2121
+    },
+    {
+      "case": "BRATS_319.npy",
+      "dice_recomputed": 0.8716056973046051,
+      "dice_recorded": 0.8716056973046051,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8541,
+      "gt_voxels_recorded": 8541
+    },
+    {
+      "case": "BRATS_010.npy",
+      "dice_recomputed": 0.7837415320438575,
+      "dice_recorded": 0.7837415320438575,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1157,
+      "gt_voxels_recorded": 1157
+    },
+    {
+      "case": "BRATS_411.npy",
+      "dice_recomputed": 0.8974391005619619,
+      "dice_recorded": 0.8974391005619619,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 22205,
+      "gt_voxels_recorded": 22205
+    },
+    {
+      "case": "BRATS_095.npy",
+      "dice_recomputed": 0.7827298050102938,
+      "dice_recorded": 0.7827298050102938,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1242,
+      "gt_voxels_recorded": 1242
+    },
+    {
+      "case": "BRATS_094.npy",
+      "dice_recomputed": 0.8209464526772122,
+      "dice_recorded": 0.8209464526772122,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 22743,
+      "gt_voxels_recorded": 22743
+    },
+    {
+      "case": "BRATS_033.npy",
+      "dice_recomputed": 0.9376838582568382,
+      "dice_recorded": 0.9376838582568382,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 18137,
+      "gt_voxels_recorded": 18137
+    },
+    {
+      "case": "BRATS_122.npy",
+      "dice_recomputed": 0.691405314817593,
+      "dice_recorded": 0.691405314817593,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2431,
+      "gt_voxels_recorded": 2431
+    },
+    {
+      "case": "BRATS_082.npy",
+      "dice_recomputed": 0.9548134276597041,
+      "dice_recorded": 0.9548134276597041,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 27922,
+      "gt_voxels_recorded": 27922
+    },
+    {
+      "case": "BRATS_053.npy",
+      "dice_recomputed": 0.8766368022045125,
+      "dice_recorded": 0.8766368022045125,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5229,
+      "gt_voxels_recorded": 5229
+    },
+    {
+      "case": "BRATS_429.npy",
+      "dice_recomputed": 0.913035168194846,
+      "dice_recorded": 0.913035168194846,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5038,
+      "gt_voxels_recorded": 5038
+    },
+    {
+      "case": "BRATS_414.npy",
+      "dice_recomputed": 0.8267299797198332,
+      "dice_recorded": 0.8267299797198332,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17965,
+      "gt_voxels_recorded": 17965
+    },
+    {
+      "case": "BRATS_219.npy",
+      "dice_recomputed": 0.8955342902707356,
+      "dice_recorded": 0.8955342902707356,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10919,
+      "gt_voxels_recorded": 10919
+    },
+    {
+      "case": "BRATS_348.npy",
+      "dice_recomputed": 0.9029759929190713,
+      "dice_recorded": 0.9029759929190713,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8780,
+      "gt_voxels_recorded": 8780
+    },
+    {
+      "case": "BRATS_040.npy",
+      "dice_recomputed": 0.8594813134795092,
+      "dice_recorded": 0.8594813134795092,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10289,
+      "gt_voxels_recorded": 10289
+    },
+    {
+      "case": "BRATS_014.npy",
+      "dice_recomputed": 0.8744042985435694,
+      "dice_recorded": 0.8744042985435694,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 28941,
+      "gt_voxels_recorded": 28941
+    },
+    {
+      "case": "BRATS_382.npy",
+      "dice_recomputed": 0.8236262605457427,
+      "dice_recorded": 0.8236262605457427,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2771,
+      "gt_voxels_recorded": 2771
+    },
+    {
+      "case": "BRATS_086.npy",
+      "dice_recomputed": 0.5989304812827262,
+      "dice_recorded": 0.5989304812827262,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2947,
+      "gt_voxels_recorded": 2947
+    },
+    {
+      "case": "BRATS_389.npy",
+      "dice_recomputed": 0.9280362432463356,
+      "dice_recorded": 0.9280362432463356,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2824,
+      "gt_voxels_recorded": 2824
+    },
+    {
+      "case": "BRATS_360.npy",
+      "dice_recomputed": 0.8417867435146372,
+      "dice_recorded": 0.8417867435146372,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 3583,
+      "gt_voxels_recorded": 3583
+    },
+    {
+      "case": "BRATS_467.npy",
+      "dice_recomputed": 0.8619361692707579,
+      "dice_recorded": 0.8619361692707579,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 25582,
+      "gt_voxels_recorded": 25582
+    },
+    {
+      "case": "BRATS_340.npy",
+      "dice_recomputed": 0.6089965397818513,
+      "dice_recorded": 0.6089965397818513,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 344,
+      "gt_voxels_recorded": 344
+    },
+    {
+      "case": "BRATS_104.npy",
+      "dice_recomputed": 0.549428177953087,
+      "dice_recorded": 0.549428177953087,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5318,
+      "gt_voxels_recorded": 5318
+    },
+    {
+      "case": "BRATS_275.npy",
+      "dice_recomputed": 0.9243044767684916,
+      "dice_recorded": 0.9243044767684916,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13718,
+      "gt_voxels_recorded": 13718
+    },
+    {
+      "case": "BRATS_088.npy",
+      "dice_recomputed": 0.8350936829748553,
+      "dice_recorded": 0.8350936829748553,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13317,
+      "gt_voxels_recorded": 13317
+    },
+    {
+      "case": "BRATS_112.npy",
+      "dice_recomputed": 0.917842772205598,
+      "dice_recorded": 0.917842772205598,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 16855,
+      "gt_voxels_recorded": 16855
+    },
+    {
+      "case": "BRATS_278.npy",
+      "dice_recomputed": 0.7837415320438575,
+      "dice_recorded": 0.7837415320438575,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1157,
+      "gt_voxels_recorded": 1157
+    },
+    {
+      "case": "BRATS_188.npy",
+      "dice_recomputed": 0.027624309392169807,
+      "dice_recorded": 0.027624309392169807,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2856,
+      "gt_voxels_recorded": 2856
+    },
+    {
+      "case": "BRATS_100.npy",
+      "dice_recomputed": 0.8503532434162203,
+      "dice_recorded": 0.8503532434162203,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 7888,
+      "gt_voxels_recorded": 7888
+    },
+    {
+      "case": "BRATS_070.npy",
+      "dice_recomputed": 0.21748400852723893,
+      "dice_recorded": 0.21748400852723893,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1242,
+      "gt_voxels_recorded": 1242
+    },
+    {
+      "case": "BRATS_178.npy",
+      "dice_recomputed": 0.4531249999645996,
+      "dice_recorded": 0.4531249999645996,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 81,
+      "gt_voxels_recorded": 81
+    },
+    {
+      "case": "BRATS_118.npy",
+      "dice_recomputed": 0.8422716923849972,
+      "dice_recorded": 0.8422716923849972,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 7006,
+      "gt_voxels_recorded": 7006
+    },
+    {
+      "case": "BRATS_011.npy",
+      "dice_recomputed": 0.8920411110163543,
+      "dice_recorded": 0.8920411110163543,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10811,
+      "gt_voxels_recorded": 10811
+    },
+    {
+      "case": "BRATS_158.npy",
+      "dice_recomputed": 0.9172276621780009,
+      "dice_recorded": 0.9172276621780009,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 6349,
+      "gt_voxels_recorded": 6349
+    },
+    {
+      "case": "BRATS_002.npy",
+      "dice_recomputed": 0.7996519469201661,
+      "dice_recorded": 0.7996519469201661,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2185,
+      "gt_voxels_recorded": 2185
+    },
+    {
+      "case": "BRATS_018.npy",
+      "dice_recomputed": 0.24275083397472785,
+      "dice_recorded": 0.24275083397472785,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15371,
+      "gt_voxels_recorded": 15371
+    },
+    {
+      "case": "BRATS_310.npy",
+      "dice_recomputed": 0.8135036153625629,
+      "dice_recorded": 0.8135036153625629,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 9560,
+      "gt_voxels_recorded": 9560
+    },
+    {
+      "case": "BRATS_297.npy",
+      "dice_recomputed": 0.8486075949324121,
+      "dice_recorded": 0.8486075949324121,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 880,
+      "gt_voxels_recorded": 880
+    },
+    {
+      "case": "BRATS_032.npy",
+      "dice_recomputed": 0.4840780365007409,
+      "dice_recorded": 0.4840780365007409,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 12115,
+      "gt_voxels_recorded": 12115
+    },
+    {
+      "case": "BRATS_106.npy",
+      "dice_recomputed": 0.343955488112868,
+      "dice_recorded": 0.343955488112868,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5423,
+      "gt_voxels_recorded": 5423
+    },
+    {
+      "case": "BRATS_399.npy",
+      "dice_recomputed": 0.9367824947991108,
+      "dice_recorded": 0.9367824947991108,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 24727,
+      "gt_voxels_recorded": 24727
+    },
+    {
+      "case": "BRATS_454.npy",
+      "dice_recomputed": 0.5382257137377483,
+      "dice_recorded": 0.5382257137377483,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 7539,
+      "gt_voxels_recorded": 7539
+    },
+    {
+      "case": "BRATS_058.npy",
+      "dice_recomputed": 0.8116925978304462,
+      "dice_recorded": 0.8116925978304462,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4467,
+      "gt_voxels_recorded": 4467
+    },
+    {
+      "case": "BRATS_421.npy",
+      "dice_recomputed": 0.8717072033562268,
+      "dice_recorded": 0.8717072033562268,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5849,
+      "gt_voxels_recorded": 5849
+    },
+    {
+      "case": "BRATS_433.npy",
+      "dice_recomputed": 0.952620455335629,
+      "dice_recorded": 0.952620455335629,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 18046,
+      "gt_voxels_recorded": 18046
+    },
+    {
+      "case": "BRATS_138.npy",
+      "dice_recomputed": 0.0,
+      "dice_recorded": 0.0,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 493,
+      "gt_voxels_recorded": 493
+    },
+    {
+      "case": "BRATS_017.npy",
+      "dice_recomputed": 0.891694084468615,
+      "dice_recorded": 0.891694084468615,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 7813,
+      "gt_voxels_recorded": 7813
+    },
+    {
+      "case": "BRATS_111.npy",
+      "dice_recomputed": 0.8702711223196167,
+      "dice_recorded": 0.8702711223196167,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 5667,
+      "gt_voxels_recorded": 5667
+    },
+    {
+      "case": "BRATS_035.npy",
+      "dice_recomputed": 0.8674989049486777,
+      "dice_recorded": 0.8674989049486777,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 4202,
+      "gt_voxels_recorded": 4202
+    },
+    {
+      "case": "BRATS_036.npy",
+      "dice_recomputed": 0.7172218284902291,
+      "dice_recorded": 0.7172218284902291,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 13212,
+      "gt_voxels_recorded": 13212
+    },
+    {
+      "case": "BRATS_050.npy",
+      "dice_recomputed": 0.9116420854436224,
+      "dice_recorded": 0.9116420854436224,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 10572,
+      "gt_voxels_recorded": 10572
+    },
+    {
+      "case": "BRATS_176.npy",
+      "dice_recomputed": 0.0,
+      "dice_recorded": 0.0,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 202,
+      "gt_voxels_recorded": 202
+    },
+    {
+      "case": "BRATS_042.npy",
+      "dice_recomputed": 0.30905337658416676,
+      "dice_recorded": 0.30905337658416676,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 2862,
+      "gt_voxels_recorded": 2862
+    },
+    {
+      "case": "BRATS_276.npy",
+      "dice_recomputed": 0.24261722561746052,
+      "dice_recorded": 0.24261722561746052,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15371,
+      "gt_voxels_recorded": 15371
+    },
+    {
+      "case": "BRATS_304.npy",
+      "dice_recomputed": 0.8899815611527659,
+      "dice_recorded": 0.8899815611527659,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 1612,
+      "gt_voxels_recorded": 1612
+    },
+    {
+      "case": "BRATS_397.npy",
+      "dice_recomputed": 0.9130258014070639,
+      "dice_recorded": 0.9130258014070639,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 15433,
+      "gt_voxels_recorded": 15433
+    },
+    {
+      "case": "BRATS_142.npy",
+      "dice_recomputed": 0.9131658555830823,
+      "dice_recorded": 0.9131658555830823,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 17606,
+      "gt_voxels_recorded": 17606
+    },
+    {
+      "case": "BRATS_098.npy",
+      "dice_recomputed": 0.8779377514287117,
+      "dice_recorded": 0.8779377514287117,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 8851,
+      "gt_voxels_recorded": 8851
+    },
+    {
+      "case": "BRATS_137.npy",
+      "dice_recomputed": 0.7884877900800893,
+      "dice_recorded": 0.7884877900800893,
+      "abs_deviation": 0.0,
+      "gt_voxels_recomputed": 14635,
+      "gt_voxels_recorded": 14635
+    }
+  ],
+  "interpretation": "Deviations near 1e-7 reflect non-deterministic reduction order in CPU inference and are harmless. Any ground-truth voxel-count mismatch, or Dice deviation above the tolerance, means the rebuilt cache is not the cache the reported results were computed on. In that case do not train on it: the three-fold SegResNet comparison would silently compare models trained on different data."
+}

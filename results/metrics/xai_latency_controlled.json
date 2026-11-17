@@ -1,0 +1,131 @@
+{
+  "provenance": {
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    }
+  },
+  "checkpoint_meta": {
+    "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+    "features": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "fold": 0,
+    "epoch": 9,
+    "val_dice": 0.729457809396354,
+    "threshold": 0.5,
+    "parameters_total": 22627875
+  },
+  "protocol": {
+    "cases": 10,
+    "warmup_cases": 1,
+    "ig_steps": 20,
+    "threads": 8,
+    "interleaved": true,
+    "within_case_order_alternated": true,
+    "rationale": "Both methods run on the same case back to back so they share thermal state; the order alternates so neither is systematically measured on the warmer core. Report the median with its interval, not the mean: a handful of CPU timings on a passively cooled laptop is dominated by whichever pass coincided with background activity."
+  },
+  "vanilla_gradient": {
+    "method": "VanillaGradient",
+    "n": 10,
+    "median_s": 5.535,
+    "median_95ci": [
+      5.2375,
+      5.7742
+    ],
+    "mean_s": 5.535,
+    "sd_s": 0.353,
+    "min_s": 4.96,
+    "max_s": 6.139,
+    "drift_s_per_case": 0.009392,
+    "raw_s": [
+      5.4989,
+      5.5094,
+      5.5597,
+      5.9877,
+      4.96,
+      5.6903,
+      5.5607,
+      5.2074,
+      5.2375,
+      6.1394
+    ]
+  },
+  "integrated_gradients": {
+    "method": "IntegratedGradients",
+    "n": 10,
+    "median_s": 112.038,
+    "median_95ci": [
+      110.243,
+      113.6625
+    ],
+    "mean_s": 111.913,
+    "sd_s": 2.24,
+    "min_s": 108.525,
+    "max_s": 115.132,
+    "drift_s_per_case": 0.043619,
+    "raw_s": [
+      108.525,
+      112.3939,
+      114.698,
+      112.3565,
+      110.5932,
+      111.281,
+      115.1324,
+      113.6625,
+      108.766,
+      111.72
+    ]
+  },
+  "cost_ratio_ig_over_vg": {
+    "median": 20.52,
+    "median_95ci": [
+      19.2503,
+      21.2288
+    ],
+    "min": 18.2,
+    "max": 22.3
+  },
+  "order_effect_vanilla_gradient": {
+    "median_when_measured_first": 5.499,
+    "median_when_measured_second": 5.69,
+    "note": "These should agree. A systematic gap means position within the case still influences the timing and the headline figures should not be trusted."
+  },
+  "peak_rss_mib": 2870.9,
+  "peak_rss_gb": 2.8,
+  "superseded_figures": {
+    "manuscript_vanilla_gradient_s": 8.95,
+    "manuscript_integrated_gradients_s": 177.77,
+    "note": "The manuscript figures came from a September run on a machine in an unknown thermal state and should be replaced by the medians here. The difference between the September and November runs must NOT be reported as a speed improvement: the code change cannot account for it."
+  },
+  "order": [
+    "vg_first",
+    "ig_first",
+    "vg_first",
+    "ig_first",
+    "vg_first",
+    "ig_first",
+    "vg_first",
+    "ig_first",
+    "vg_first",
+    "ig_first"
+  ],
+  "interpretation": "Report median_s with median_95ci for each method, and the median cost ratio for the practicality discussion. Check drift_s_per_case is near zero and that the two order-effect medians agree before quoting anything."
+}

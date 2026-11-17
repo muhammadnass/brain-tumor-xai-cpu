@@ -1,0 +1,70 @@
+{
+  "hardware": {
+    "cpu": "Intel Core i5-1235U",
+    "ram_gb": 7.4,
+    "gpu": "none (CPU-only)",
+    "os": "Ubuntu Linux",
+    "torch_device": "cpu"
+  },
+  "a_segmentation_inference": {
+    "mean_s": 2.322,
+    "std_s": 0.113,
+    "n_runs": 5,
+    "runs": [2.525, 2.266, 2.259, 2.279, 2.283],
+    "manuscript_text": "2.32 ± 0.11 s (n=5, random-noise input, CPU)"
+  },
+  "b_preview_mesh_step4": {
+    "first_call_s": 0.609,
+    "warm_mean_s": 0.037,
+    "warm_std_s": 0.002,
+    "mean_s": 0.151,
+    "std_s": 0.256,
+    "n_runs": 5,
+    "runs": [0.609, 0.037, 0.039, 0.035, 0.035],
+    "note": "synthetic ellipsoid mask ~7.7k voxels; run 1 includes marching_cubes first-import overhead. Use first_call_s for per-session user-experience figure.",
+    "manuscript_text": "0.61 s per session (first call; marching cubes step_size=4, ~7.7k voxel tumour)"
+  },
+  "c_full_mesh_step2": {
+    "mean_s": 0.043,
+    "std_s": 0.003,
+    "n_runs": 5,
+    "runs": [0.047, 0.044, 0.041, 0.043, 0.041],
+    "note": "marching_cubes already initialised by preview call; step_size=2 on same synthetic mask",
+    "manuscript_text": "0.04 ± 0.00 s (after preview; step_size=2)"
+  },
+  "d_integrated_gradients_steps20": {
+    "mean_s": 235.769,
+    "std_s": 7.308,
+    "n_runs": 5,
+    "steps": 20,
+    "runs": [227.358, 235.720, 237.388, 246.833, 231.545],
+    "manuscript_text": "235.77 ± 7.31 s (n=5, 20 steps, CPU); computed in background thread"
+  },
+  "f_peak_ram_mb": {
+    "rss_before_mb": 425.6,
+    "rss_after_mb": 468.7,
+    "delta_mb": 43.1,
+    "note": "psutil RSS; includes model weights (22.6M params) + input tensor + activations",
+    "manuscript_text": "468.7 MB RSS peak (Δ43.1 MB above baseline during inference)"
+  },
+  "e_end_to_end_browser": {
+    "note": "Measure with browser DevTools Network waterfall, 5 runs, after Cloudflare Tunnel is live"
+  },
+  "g_static_asset_sizes": {
+    "note": "Measure in DevTools Network tab before/after enabling Cloudflare Auto Minify"
+  },
+  "h_cloudflare_url": {
+    "note": "Printed by tunnel/start_tunnel.sh at startup"
+  },
+  "i_admin_portal_path": "/admin",
+  "j_db_column_names": [
+    "evaluation_id", "evaluator_code", "case_ref", "case_created_at", "case_status",
+    "concordance", "xai_altered_reading", "anatomical_plausibility",
+    "tumour_location_correct", "margin_accurate",
+    "sus_1", "sus_2", "sus_3", "sus_4", "sus_5",
+    "sus_6", "sus_7", "sus_8", "sus_9", "sus_10", "sus_score",
+    "nasa_mental_demand", "nasa_physical_demand", "nasa_temporal_demand",
+    "nasa_performance", "nasa_effort", "nasa_frustration", "nasa_raw_score",
+    "submitted_at", "free_text_notes"
+  ]
+}

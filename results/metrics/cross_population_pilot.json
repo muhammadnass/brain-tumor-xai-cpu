@@ -1,0 +1,708 @@
+{
+  "provenance": {
+    "threshold": 0.5,
+    "tumour_class": 1,
+    "checkpoints": [
+      "models/segmentation/unet3d_cv_fold0.pth",
+      "models/segmentation/unet3d_cv_fold1.pth",
+      "models/segmentation/unet3d_cv_fold2.pth"
+    ],
+    "decathlon_remap": "scripts.train_cv:remap",
+    "africa_remap": "none at load time; applied at cache time by cache_bratsafrica.py",
+    "fold_splits": {
+      "0": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 0,
+        "n_train": 322,
+        "n_val": 162,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      },
+      "1": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 1,
+        "n_train": 323,
+        "n_val": 161,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      },
+      "2": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 2,
+        "n_train": 323,
+        "n_val": 161,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      }
+    },
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "per_fold_checkpoint_meta": {
+      "0": {
+        "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+        "features": [
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "fold": 0,
+        "epoch": 9,
+        "val_dice": 0.729457809396354,
+        "threshold": 0.5,
+        "parameters_total": 22627875
+      },
+      "1": {
+        "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+        "features": [
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "fold": 1,
+        "epoch": 12,
+        "val_dice": 0.7666977578856796,
+        "threshold": 0.5,
+        "parameters_total": 22627875
+      },
+      "2": {
+        "checkpoint": "models/segmentation/unet3d_cv_fold2.pth",
+        "features": [
+          16,
+          32,
+          64,
+          128,
+          256
+        ],
+        "fold": 2,
+        "epoch": 11,
+        "val_dice": 0.7418327070217766,
+        "threshold": 0.5,
+        "parameters_total": 22627875
+      }
+    },
+    "africa_manifest": {
+      "total": 146,
+      "by_category": {
+        "51_OtherNeoplasms": 51,
+        "95_Glioma": 95
+      }
+    }
+  },
+  "label_verification": {
+    "brats_africa": {
+      "checked": 25,
+      "before_remap": {
+        "0": {
+          "voxels": 51587684,
+          "fraction": 0.983957
+        },
+        "1": {
+          "voxels": 290199,
+          "fraction": 0.005535
+        },
+        "2": {
+          "voxels": 550917,
+          "fraction": 0.010508
+        }
+      },
+      "after_remap": {
+        "0": {
+          "voxels": 51587684,
+          "fraction": 0.983957
+        },
+        "1": {
+          "voxels": 290199,
+          "fraction": 0.005535
+        },
+        "2": {
+          "voxels": 550917,
+          "fraction": 0.010508
+        }
+      }
+    },
+    "decathlon": {
+      "checked": 25,
+      "before_remap": {
+        "0": {
+          "voxels": 51791290,
+          "fraction": 0.98784
+        },
+        "1": {
+          "voxels": 386593,
+          "fraction": 0.007374
+        },
+        "2": {
+          "voxels": 128737,
+          "fraction": 0.002455
+        },
+        "3": {
+          "voxels": 122180,
+          "fraction": 0.00233
+        }
+      },
+      "after_remap": {
+        "0": {
+          "voxels": 51791290,
+          "fraction": 0.98784
+        },
+        "1": {
+          "voxels": 250917,
+          "fraction": 0.004786
+        },
+        "2": {
+          "voxels": 386593,
+          "fraction": 0.007374
+        }
+      }
+    }
+  },
+  "brats_africa_by_category": {
+    "51_OtherNeoplasms": {
+      "n": 3,
+      "mean_dice": 0.8334,
+      "sd": 0.0337,
+      "median": 0.8143,
+      "mean_95ci": [
+        0.8136,
+        0.8723
+      ]
+    },
+    "95_Glioma": {
+      "n": 9,
+      "mean_dice": 0.8032,
+      "sd": 0.1187,
+      "median": 0.8044,
+      "mean_95ci": [
+        0.7299,
+        0.8762
+      ]
+    }
+  },
+  "per_fold": {
+    "0": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "africa_n": 4,
+      "africa_mean_dice": 0.7957,
+      "decathlon_n": 4,
+      "decathlon_mean_dice": 0.7788
+    },
+    "1": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+      "africa_n": 4,
+      "africa_mean_dice": 0.8197,
+      "decathlon_n": 4,
+      "decathlon_mean_dice": 0.8618
+    },
+    "2": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold2.pth",
+      "africa_n": 4,
+      "africa_mean_dice": 0.8168,
+      "decathlon_n": 4,
+      "decathlon_mean_dice": 0.7676
+    }
+  },
+  "pooled": {
+    "decathlon_n": 12,
+    "brats_africa_n": 12
+  },
+  "comparisons": [
+    {
+      "metric": "dice",
+      "decathlon": {
+        "n": 12,
+        "mean": 0.8027,
+        "sd": 0.0852,
+        "median": 0.8159,
+        "mean_95ci": [
+          0.7549,
+          0.8476
+        ]
+      },
+      "brats_africa": {
+        "n": 12,
+        "mean": 0.8108,
+        "sd": 0.1032,
+        "median": 0.8102,
+        "mean_95ci": [
+          0.7541,
+          0.8643
+        ]
+      },
+      "mean_difference": -0.008,
+      "mean_difference_95ci": [
+        -0.0789,
+        0.0635
+      ],
+      "hedges_g": -0.082,
+      "cliffs_delta": 0.0278,
+      "mann_whitney": {
+        "U": 74.0,
+        "z": 0.1155,
+        "p_two_sided": 0.908073
+      },
+      "min_detectable_g_at_80pct_power": 1.144
+    },
+    {
+      "metric": "iou",
+      "decathlon": {
+        "n": 12,
+        "mean": 0.678,
+        "sd": 0.1167,
+        "median": 0.689,
+        "mean_95ci": [
+          0.6145,
+          0.7414
+        ]
+      },
+      "brats_africa": {
+        "n": 12,
+        "mean": 0.6932,
+        "sd": 0.1444,
+        "median": 0.681,
+        "mean_95ci": [
+          0.6157,
+          0.7704
+        ]
+      },
+      "mean_difference": -0.0151,
+      "mean_difference_95ci": [
+        -0.1128,
+        0.084
+      ],
+      "hedges_g": -0.1114,
+      "cliffs_delta": 0.0278,
+      "mann_whitney": {
+        "U": 74.0,
+        "z": 0.1155,
+        "p_two_sided": 0.908073
+      },
+      "min_detectable_g_at_80pct_power": 1.144
+    },
+    {
+      "metric": "sensitivity",
+      "decathlon": {
+        "n": 12,
+        "mean": 0.8915,
+        "sd": 0.1166,
+        "median": 0.9249,
+        "mean_95ci": [
+          0.8243,
+          0.949
+        ]
+      },
+      "brats_africa": {
+        "n": 12,
+        "mean": 0.8616,
+        "sd": 0.1053,
+        "median": 0.875,
+        "mean_95ci": [
+          0.8046,
+          0.9171
+        ]
+      },
+      "mean_difference": 0.03,
+      "mean_difference_95ci": [
+        -0.0566,
+        0.1127
+      ],
+      "hedges_g": 0.2605,
+      "cliffs_delta": 0.25,
+      "mann_whitney": {
+        "U": 90.0,
+        "z": 1.0392,
+        "p_two_sided": 0.298698
+      },
+      "min_detectable_g_at_80pct_power": 1.144
+    },
+    {
+      "metric": "specificity",
+      "decathlon": {
+        "n": 12,
+        "mean": 0.9985,
+        "sd": 0.0017,
+        "median": 0.999,
+        "mean_95ci": [
+          0.9974,
+          0.9992
+        ]
+      },
+      "brats_africa": {
+        "n": 12,
+        "mean": 0.9988,
+        "sd": 0.0011,
+        "median": 0.999,
+        "mean_95ci": [
+          0.9982,
+          0.9994
+        ]
+      },
+      "mean_difference": -0.0003,
+      "mean_difference_95ci": [
+        -0.0015,
+        0.0007
+      ],
+      "hedges_g": -0.2157,
+      "cliffs_delta": -0.0833,
+      "mann_whitney": {
+        "U": 66.0,
+        "z": -0.3464,
+        "p_two_sided": 0.729034
+      },
+      "min_detectable_g_at_80pct_power": 1.144
+    },
+    {
+      "metric": "precision",
+      "decathlon": {
+        "n": 12,
+        "mean": 0.7445,
+        "sd": 0.1157,
+        "median": 0.7315,
+        "mean_95ci": [
+          0.6815,
+          0.8064
+        ]
+      },
+      "brats_africa": {
+        "n": 12,
+        "mean": 0.7993,
+        "sd": 0.1934,
+        "median": 0.8186,
+        "mean_95ci": [
+          0.6937,
+          0.9023
+        ]
+      },
+      "mean_difference": -0.0549,
+      "mean_difference_95ci": [
+        -0.176,
+        0.0679
+      ],
+      "hedges_g": -0.3323,
+      "cliffs_delta": -0.1389,
+      "mann_whitney": {
+        "U": 62.0,
+        "z": -0.5774,
+        "p_two_sided": 0.563703
+      },
+      "min_detectable_g_at_80pct_power": 1.144
+    },
+    {
+      "metric": "hd95",
+      "decathlon": {
+        "n": 12,
+        "mean": 8.3708,
+        "sd": 8.4649,
+        "median": 5.2976,
+        "mean_95ci": [
+          4.4974,
+          13.4643
+        ]
+      },
+      "brats_africa": {
+        "n": 12,
+        "mean": 6.3705,
+        "sd": 6.04,
+        "median": 3.5325,
+        "mean_95ci": [
+          3.2304,
+          9.8422
+        ]
+      },
+      "mean_difference": 2.0003,
+      "mean_difference_95ci": [
+        -3.3305,
+        8.1718
+      ],
+      "hedges_g": 0.2627,
+      "cliffs_delta": 0.2708,
+      "mann_whitney": {
+        "U": 91.5,
+        "z": 1.1276,
+        "p_two_sided": 0.25951
+      },
+      "min_detectable_g_at_80pct_power": 1.144,
+      "note": "undefined where either mask is empty; 0/12 Decathlon and 0/12 BraTS-Africa cases excluded"
+    }
+  ],
+  "per_case": {
+    "decathlon": [
+      {
+        "dice": 0.8132329520770137,
+        "iou": 0.6852507014753138,
+        "sensitivity": 0.8858224254835423,
+        "specificity": 0.9991123061816635,
+        "precision": 0.7516392345768077,
+        "gt_voxels": 6341,
+        "pred_voxels": 7473,
+        "hd95": 2.4494898319244385,
+        "case": "BRATS_434.npy"
+      },
+      {
+        "dice": 0.8247052793433978,
+        "iou": 0.7017008286080443,
+        "sensitivity": 0.9933631733276843,
+        "specificity": 0.9987118980347429,
+        "precision": 0.7050060247554989,
+        "gt_voxels": 6479,
+        "pred_voxels": 9129,
+        "hd95": 5.196152210235596,
+        "case": "BRATS_378.npy"
+      },
+      {
+        "dice": 0.8133915735926094,
+        "iou": 0.6854759796837586,
+        "sensitivity": 0.999117087747216,
+        "specificity": 0.9967648341263131,
+        "precision": 0.6858914584107209,
+        "gt_voxels": 14724,
+        "pred_voxels": 21448,
+        "hd95": 5.916079998016357,
+        "case": "BRATS_426.npy"
+      },
+      {
+        "dice": 0.6636993576448679,
+        "iou": 0.496669190007382,
+        "sensitivity": 0.9886980108491645,
+        "specificity": 0.9936906155824664,
+        "precision": 0.4995051389415685,
+        "gt_voxels": 13272,
+        "pred_voxels": 26270,
+        "hd95": 17.57839584350586,
+        "case": "BRATS_181.npy"
+      },
+      {
+        "dice": 0.8379804695612557,
+        "iou": 0.7211414676006858,
+        "sensitivity": 0.9953603158924034,
+        "specificity": 0.9981543079085846,
+        "precision": 0.7235737351986196,
+        "gt_voxels": 10130,
+        "pred_voxels": 13935,
+        "hd95": 5.398964881896973,
+        "case": "BRATS_295.npy"
+      },
+      {
+        "dice": 0.9466193440223749,
+        "iou": 0.89864887745051,
+        "sensitivity": 0.9536095440005197,
+        "specificity": 0.9991775087794366,
+        "precision": 0.939730878186636,
+        "gt_voxels": 27829,
+        "pred_voxels": 28240,
+        "hd95": 7.348469257354736,
+        "case": "BRATS_474.npy"
+      },
+      {
+        "dice": 0.770219966156446,
+        "iou": 0.6263070996113027,
+        "sensitivity": 0.8498879760952213,
+        "specificity": 0.9997719262166949,
+        "precision": 0.7042079207877215,
+        "gt_voxels": 1339,
+        "pred_voxels": 1616,
+        "hd95": 4.123105525970459,
+        "case": "BRATS_153.npy"
+      },
+      {
+        "dice": 0.8925105292065602,
+        "iou": 0.805886243385355,
+        "sensitivity": 0.9015908250081371,
+        "specificity": 0.9995390233709838,
+        "precision": 0.8836113125442546,
+        "gt_voxels": 8109,
+        "pred_voxels": 8274,
+        "hd95": 2.0,
+        "case": "BRATS_363.npy"
+      },
+      {
+        "dice": 0.830927000404243,
+        "iou": 0.7107571560471944,
+        "sensitivity": 0.9481139337937674,
+        "specificity": 0.9989625270907614,
+        "precision": 0.7395220367470402,
+        "gt_voxels": 6495,
+        "pred_voxels": 8327,
+        "hd95": 3.464101552963257,
+        "case": "BRATS_132.npy"
+      },
+      {
+        "dice": 0.8183324130311516,
+        "iou": 0.692523364485519,
+        "sensitivity": 0.8135832483720385,
+        "specificity": 0.9989306280317415,
+        "precision": 0.8231373482497634,
+        "gt_voxels": 12751,
+        "pred_voxels": 12603,
+        "hd95": 4.0,
+        "case": "BRATS_041.npy"
+      },
+      {
+        "dice": 0.6373197625100616,
+        "iou": 0.46769575500999916,
+        "sensitivity": 0.626479906618932,
+        "specificity": 0.9990263753762825,
+        "precision": 0.6485413429990531,
+        "gt_voxels": 5997,
+        "pred_voxels": 5793,
+        "hd95": 11.575837135314941,
+        "case": "BRATS_269.npy"
+      },
+      {
+        "dice": 0.7837837837829226,
+        "iou": 0.6444444444432802,
+        "sensitivity": 0.7429702145370902,
+        "specificity": 0.9996491984375423,
+        "precision": 0.8293420134833077,
+        "gt_voxels": 4801,
+        "pred_voxels": 4301,
+        "hd95": 31.399044036865234,
+        "case": "BRATS_441.npy"
+      }
+    ],
+    "brats_africa": [
+      {
+        "dice": 0.6254507386293908,
+        "iou": 0.45502242531906995,
+        "sensitivity": 0.8296559172954333,
+        "specificity": 0.9974477093717711,
+        "precision": 0.5019135629604201,
+        "gt_voxels": 6481,
+        "pred_voxels": 10713,
+        "hd95": 15.132745742797852,
+        "case": "BraTS-SSA-00002-000.npy"
+      },
+      {
+        "dice": 0.9370498331086771,
+        "iou": 0.8815557514320252,
+        "sensitivity": 0.9235119849175009,
+        "specificity": 0.9994027504380345,
+        "precision": 0.9509904912832999,
+        "gt_voxels": 25991,
+        "pred_voxels": 25240,
+        "hd95": 2.0,
+        "case": "BraTS-SSA-00007-000.npy"
+      },
+      {
+        "dice": 0.8068495816303534,
+        "iou": 0.676234588035308,
+        "sensitivity": 0.9769107529912572,
+        "specificity": 0.9977388414605752,
+        "precision": 0.6872182444970252,
+        "gt_voxels": 10611,
+        "pred_voxels": 15084,
+        "hd95": 4.0,
+        "case": "BraTS-SSA-00008-000.npy"
+      },
+      {
+        "dice": 0.8135917683646642,
+        "iou": 0.6857603872515414,
+        "sensitivity": 0.687980574664735,
+        "specificity": 0.9999923525841048,
+        "precision": 0.9953161592476718,
+        "gt_voxels": 4942,
+        "pred_voxels": 3416,
+        "hd95": 2.8284270763397217,
+        "case": "BraTS-SSA-00009-000.npy"
+      },
+      {
+        "dice": 0.6629860492723876,
+        "iou": 0.4958707041998971,
+        "sensitivity": 0.8615954328022503,
+        "specificity": 0.9977136526981003,
+        "precision": 0.5387881126972802,
+        "gt_voxels": 6481,
+        "pred_voxels": 10364,
+        "hd95": 14.286348342895508,
+        "case": "BraTS-SSA-00002-000.npy"
+      },
+      {
+        "dice": 0.9458065264010229,
+        "iou": 0.8971849571142522,
+        "sensitivity": 0.9417490669843631,
+        "specificity": 0.999376678104691,
+        "precision": 0.9498990996581225,
+        "gt_voxels": 25991,
+        "pred_voxels": 25768,
+        "hd95": 2.0,
+        "case": "BraTS-SSA-00007-000.npy"
+      },
+      {
+        "dice": 0.7978293499592819,
+        "iou": 0.6636573184782535,
+        "sensitivity": 0.9768165111667355,
+        "specificity": 0.9976003347166387,
+        "precision": 0.6742779078840266,
+        "gt_voxels": 10611,
+        "pred_voxels": 15372,
+        "hd95": 4.560493469238281,
+        "case": "BraTS-SSA-00008-000.npy"
+      },
+      {
+        "dice": 0.8722607017135547,
+        "iou": 0.7734595247668677,
+        "sensitivity": 0.7772157021433079,
+        "specificity": 0.9999885288761596,
+        "precision": 0.9937904269055788,
+        "gt_voxels": 4942,
+        "pred_voxels": 3865,
+        "hd95": 2.4494898319244385,
+        "case": "BraTS-SSA-00009-000.npy"
+      },
+      {
+        "dice": 0.7186855492914075,
+        "iou": 0.560897091962055,
+        "sensitivity": 0.8065113408412182,
+        "specificity": 0.998642541078912,
+        "precision": 0.6481091134523892,
+        "gt_voxels": 6481,
+        "pred_voxels": 8065,
+        "hd95": 19.0,
+        "case": "BraTS-SSA-00002-000.npy"
+      },
+      {
+        "dice": 0.9298860295596372,
+        "iou": 0.8689598073156447,
+        "sensitivity": 0.8883844407676164,
+        "specificity": 0.9997194810060589,
+        "precision": 0.9754551983435531,
+        "gt_voxels": 25991,
+        "pred_voxels": 23671,
+        "hd95": 3.0,
+        "case": "BraTS-SSA-00007-000.npy"
+      },
+      {
+        "dice": 0.8044311887512862,
+        "iou": 0.6728439059154585,
+        "sensitivity": 0.9786071058326467,
+        "specificity": 0.9976889982032416,
+        "precision": 0.6828883335520959,
+        "gt_voxels": 10611,
+        "pred_voxels": 15206,
+        "hd95": 4.123105525970459,
+        "case": "BraTS-SSA-00008-000.npy"
+      },
+      {
+        "dice": 0.8143283582079828,
+        "iou": 0.6868076535736419,
+        "sensitivity": 0.6900040469431606,
+        "specificity": 0.9999890068396527,
+        "precision": 0.9933003204165648,
+        "gt_voxels": 4942,
+        "pred_voxels": 3433,
+        "hd95": 3.0649149417877197,
+        "case": "BraTS-SSA-00009-000.npy"
+      }
+    ]
+  },
+  "interpretation_note": "Report as an absence of detected difference, not as demonstrated equivalence. min_detectable_g_at_80pct_power gives the smallest standardised difference this comparison could have detected."
+}

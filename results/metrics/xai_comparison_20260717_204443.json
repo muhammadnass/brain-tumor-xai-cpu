@@ -1,0 +1,33 @@
+{
+  "per_case": {
+    "BRATS_072": {
+      "grad_cam_vs_vanilla_gradient": -0.07419982022022158,
+      "grad_cam_vs_integrated_gradients": -0.047481485146873455,
+      "vanilla_gradient_vs_integrated_gradients": 0.7474913367604682
+    },
+    "BRATS_071": {
+      "grad_cam_vs_vanilla_gradient": 0.06410532226764547,
+      "grad_cam_vs_integrated_gradients": 0.06364619605905704,
+      "vanilla_gradient_vs_integrated_gradients": 0.6249351036289208
+    },
+    "BRATS_065": {
+      "grad_cam_vs_vanilla_gradient": NaN,
+      "grad_cam_vs_integrated_gradients": NaN,
+      "vanilla_gradient_vs_integrated_gradients": 0.4969072365689738
+    }
+  },
+  "summary": {
+    "grad_cam_vs_vanilla_gradient": {
+      "mean": NaN,
+      "std": NaN
+    },
+    "grad_cam_vs_integrated_gradients": {
+      "mean": NaN,
+      "std": NaN
+    },
+    "vanilla_gradient_vs_integrated_gradients": {
+      "mean": 0.6231112256527875,
+      "std": 0.10230865950755454
+    }
+  }
+}

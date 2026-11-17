@@ -1,0 +1,68 @@
+{
+  "BRATS_072": {
+    "rotate_2deg": {
+      "grad_cam": 0.9998311400413513,
+      "vanilla_gradient": 0.9102874398231506,
+      "integrated_gradients": 0.8516383767127991
+    },
+    "rotate_5deg": {
+      "grad_cam": 0.9995852708816528,
+      "vanilla_gradient": 0.8688957095146179,
+      "integrated_gradients": 0.7740545868873596
+    },
+    "gaussian_noise_low": {
+      "grad_cam": 0.9999971389770508,
+      "vanilla_gradient": 0.9745844602584839,
+      "integrated_gradients": 0.9953909516334534
+    },
+    "gaussian_noise_high": {
+      "grad_cam": 0.9999879598617554,
+      "vanilla_gradient": 0.9488846659660339,
+      "integrated_gradients": 0.9706172347068787
+    }
+  },
+  "BRATS_071": {
+    "rotate_2deg": {
+      "grad_cam": 1.0000053644180298,
+      "vanilla_gradient": 0.9785405397415161,
+      "integrated_gradients": 0.9405547380447388
+    },
+    "rotate_5deg": {
+      "grad_cam": 1.0000050067901611,
+      "vanilla_gradient": 0.9532931447029114,
+      "integrated_gradients": 0.8571254014968872
+    },
+    "gaussian_noise_low": {
+      "grad_cam": 0.9999945759773254,
+      "vanilla_gradient": 0.9611674547195435,
+      "integrated_gradients": 0.9993979930877686
+    },
+    "gaussian_noise_high": {
+      "grad_cam": 0.9999915361404419,
+      "vanilla_gradient": 0.9411007165908813,
+      "integrated_gradients": 0.9926967024803162
+    }
+  },
+  "BRATS_065": {
+    "rotate_2deg": {
+      "grad_cam": NaN,
+      "vanilla_gradient": 0.9569340944290161,
+      "integrated_gradients": 0.8944711685180664
+    },
+    "rotate_5deg": {
+      "grad_cam": NaN,
+      "vanilla_gradient": 0.9081308841705322,
+      "integrated_gradients": 0.7546876072883606
+    },
+    "gaussian_noise_low": {
+      "grad_cam": NaN,
+      "vanilla_gradient": 0.991855263710022,
+      "integrated_gradients": 0.9971958994865417
+    },
+    "gaussian_noise_high": {
+      "grad_cam": NaN,
+      "vanilla_gradient": 0.9801477193832397,
+      "integrated_gradients": 0.9828310012817383
+    }
+  }
+}

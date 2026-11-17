@@ -1,0 +1,271 @@
+{
+  "provenance": {
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    }
+  },
+  "checkpoint_meta": {
+    "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+    "features": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "fold": 0,
+    "epoch": 9,
+    "val_dice": 0.729457809396354,
+    "threshold": 0.5,
+    "parameters_total": 22627875
+  },
+  "fold": 0,
+  "n_cases": 15,
+  "ig_steps": 20,
+  "model_type": "UNet3D",
+  "model_exposes_forward_logits": false,
+  "change_1_softmax_status": "INERT -- forward() already returns logits for this model class",
+  "configurations": {
+    "whole_volume": "target = output[0,1].sum() over all voxels (pre-2026-10-16 behaviour)",
+    "predicted": "target = (output[0,1] * predicted_mask).sum() (current behaviour)"
+  },
+  "summary": {
+    "whole_volume": {
+      "n": 15,
+      "n_undefined": 0,
+      "mean": 0.32,
+      "median": 0.3332,
+      "sd": 0.1194,
+      "min": 0.1356,
+      "max": 0.5394,
+      "degenerate_vg": 0,
+      "degenerate_ig": 0
+    },
+    "predicted": {
+      "n": 15,
+      "n_undefined": 0,
+      "mean": 0.6221,
+      "median": 0.7097,
+      "sd": 0.1783,
+      "min": 0.1688,
+      "max": 0.796,
+      "degenerate_vg": 0,
+      "degenerate_ig": 0
+    }
+  },
+  "reproduction_checks": {
+    "whole_volume_reproduces_recorded": true,
+    "predicted_reproduces_recorded": true,
+    "recorded_whole": 0.32,
+    "recorded_masked": 0.6221,
+    "tolerance": 0.005
+  },
+  "attribution_sound": true,
+  "tumour_size_effect": {
+    "n": 15,
+    "pearson_predvoxels_vs_delta": 0.5496520945989879,
+    "note": "Correlation between the number of predicted tumour voxels and the change in agreement. The Grad-CAM note in attention_visualizer.py reported r = -0.66 between attention magnitude and tumour size under the whole-volume target; a positive correlation here would mean the fix helps larger tumours most, which is the same mechanism seen from the other direction."
+  },
+  "per_case": {
+    "whole_volume": {
+      "BRATS_434.npy": {
+        "pearson_vg_ig": 0.22848881792522707,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_378.npy": {
+        "pearson_vg_ig": 0.1461886995628727,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_426.npy": {
+        "pearson_vg_ig": 0.34137391890074065,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_181.npy": {
+        "pearson_vg_ig": 0.47789385055898037,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_141.npy": {
+        "pearson_vg_ig": 0.3673992457857449,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_184.npy": {
+        "pearson_vg_ig": 0.23054975410340306,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_227.npy": {
+        "pearson_vg_ig": 0.5393564686933773,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_296.npy": {
+        "pearson_vg_ig": 0.19130842681533483,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_046.npy": {
+        "pearson_vg_ig": 0.1356348921480754,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_282.npy": {
+        "pearson_vg_ig": 0.4002413136446368,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_169.npy": {
+        "pearson_vg_ig": 0.3332160988571484,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_139.npy": {
+        "pearson_vg_ig": 0.37945591130358797,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_464.npy": {
+        "pearson_vg_ig": 0.2819550662989648,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_451.npy": {
+        "pearson_vg_ig": 0.30517785288062543,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      },
+      "BRATS_204.npy": {
+        "pearson_vg_ig": 0.44178951966688623,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": null
+      }
+    },
+    "predicted": {
+      "BRATS_434.npy": {
+        "pearson_vg_ig": 0.6668177664004663,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 7551.0
+      },
+      "BRATS_378.npy": {
+        "pearson_vg_ig": 0.7219448641315355,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 9189.0
+      },
+      "BRATS_426.npy": {
+        "pearson_vg_ig": 0.7549139532543936,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 21567.0
+      },
+      "BRATS_181.npy": {
+        "pearson_vg_ig": 0.7642800603848163,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 26526.0
+      },
+      "BRATS_141.npy": {
+        "pearson_vg_ig": 0.5517899145516355,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 15487.0
+      },
+      "BRATS_184.npy": {
+        "pearson_vg_ig": 0.16875382896724683,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 409.0
+      },
+      "BRATS_227.npy": {
+        "pearson_vg_ig": 0.7102291846206276,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 9937.0
+      },
+      "BRATS_296.npy": {
+        "pearson_vg_ig": 0.730154087413623,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 8333.0
+      },
+      "BRATS_046.npy": {
+        "pearson_vg_ig": 0.7960060126517932,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 22655.0
+      },
+      "BRATS_282.npy": {
+        "pearson_vg_ig": 0.39569679476512487,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 3409.0
+      },
+      "BRATS_169.npy": {
+        "pearson_vg_ig": 0.3958570545408752,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 290.0
+      },
+      "BRATS_139.npy": {
+        "pearson_vg_ig": 0.5367289897936529,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 7610.0
+      },
+      "BRATS_464.npy": {
+        "pearson_vg_ig": 0.7319264235888311,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 12078.0
+      },
+      "BRATS_451.npy": {
+        "pearson_vg_ig": 0.6964720062242409,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 16902.0
+      },
+      "BRATS_204.npy": {
+        "pearson_vg_ig": 0.7096583718783551,
+        "vg_degenerate": false,
+        "ig_degenerate": false,
+        "predicted_voxels": 9831.0
+      }
+    }
+  },
+  "elapsed_min": 54.0,
+  "interpretation": "If both reproduction checks pass, the entire change in reported VG/IG agreement is attributable to the backward-target definition, and the manuscript's 0.32 is an artefact of summing the target-class output over the whole volume. If they fail, this harness does not faithfully reproduce either code path and no conclusion should be drawn from it."
+}

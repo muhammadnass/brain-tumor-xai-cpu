@@ -1,0 +1,60 @@
+# Pinned environment for "Resource Efficient, Multi-Method Explainable AI for Brain
+# Tumor Segmentation with Cross-Population Validation".
+#
+# Python 3.12.3. These are the exact versions every published number was produced with.
+#
+# PyTorch is CPU-only and is NOT listed here, because it must come from the CPU wheel
+# index or pip will pull the CUDA build. Install it first:
+#
+#   pip install torch==2.5.1+cpu torchvision==0.20.1+cpu \
+#       --index-url https://download.pytorch.org/whl/cpu
+#
+# then:  pip install -r requirements.txt
+
+# --- Numerical core -------------------------------------------------------------
+numpy==1.26.4
+scipy==1.14.0
+scikit-learn==1.5.0
+scikit-image==0.24.0
+pandas==2.2.2
+
+# --- Medical imaging ------------------------------------------------------------
+monai==1.4.0
+nibabel==5.2.1
+SimpleITK==2.4.0
+pydicom==2.4.4
+
+# --- Explainability -------------------------------------------------------------
+# The gradient methods used in the paper (Vanilla Gradient, Integrated Gradients) are
+# implemented directly in src/xai_explainers/gradient_methods.py and depend only on
+# torch. These are present for the comparison and interface code.
+captum==0.9.0
+shap==0.45.1
+grad-cam==1.4.8
+
+# --- Figures --------------------------------------------------------------------
+matplotlib==3.9.2
+plotly==5.24.1
+
+# --- Deployment interface -------------------------------------------------------
+flask==3.0.3
+flask-cors==4.0.0
+flask-compress==1.15
+streamlit==1.40.2
+opencv-python==4.8.1.78
+Pillow==11.0.0
+
+# --- Clinician-evaluation module ------------------------------------------------
+bcrypt==4.2.1
+reportlab==4.2.5
+psutil==7.2.2
+
+# --- Utilities ------------------------------------------------------------------
+python-dotenv==1.0.1
+pyyaml==6.0.1
+tqdm==4.67.0
+requests==2.32.3
+
+# --- Testing --------------------------------------------------------------------
+pytest==8.0.2
+pytest-cov==5.0.0

@@ -1,0 +1,821 @@
+{
+  "provenance": {
+    "fold": 0,
+    "target_class": 1,
+    "threshold": 0.5,
+    "sigmas": [
+      0.01,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "seed": 42,
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    },
+    "fold_splits": {
+      "0": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 0,
+        "n_train": 322,
+        "n_val": 162,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      }
+    },
+    "implementations": {
+      "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, cls)",
+      "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, cls)"
+    },
+    "grad_cam": "excluded: withdrawn, see Section 4.4",
+    "progress_file": "results/metrics/stability_n15.progress.jsonl"
+  },
+  "implementations": {
+    "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, cls)",
+    "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, cls)"
+  },
+  "fingerprint": {
+    "checkpoint": {
+      "path": "/home/muhammad-sanusi/neurosurgery-xai-planning/models/segmentation/unet3d_cv_fold0.pth",
+      "sha256": "d26a1533e784f6f138c9b1236b6e0c07dcc46bf50028bf7d89d8b10814562519"
+    },
+    "folds": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/folds_seed42_3fold.json",
+    "fold": 0,
+    "cache": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/cache_128",
+    "target_class": 1,
+    "ig_steps": 20,
+    "sigmas": [
+      0.01,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "seed": 42,
+    "methods": [
+      "vanilla_gradient",
+      "integrated_gradients"
+    ]
+  },
+  "n_cases": 15,
+  "sigmas": [
+    0.01,
+    0.05,
+    0.1,
+    0.2
+  ],
+  "by_sigma": {
+    "0.01": {
+      "n_cases": 15,
+      "vanilla_gradient": {
+        "n": 15,
+        "mean": 0.9968,
+        "median": 0.9981,
+        "sd": 0.0053,
+        "min": 0.9779,
+        "max": 0.9992,
+        "mean_95ci": [
+          0.9939,
+          0.9985
+        ]
+      },
+      "integrated_gradients": {
+        "n": 15,
+        "mean": 0.999,
+        "median": 0.9992,
+        "sd": 0.0007,
+        "min": 0.9975,
+        "max": 0.9997,
+        "mean_95ci": [
+          0.9986,
+          0.9993
+        ]
+      }
+    },
+    "0.05": {
+      "n_cases": 15,
+      "vanilla_gradient": {
+        "n": 15,
+        "mean": 0.9913,
+        "median": 0.9943,
+        "sd": 0.0081,
+        "min": 0.9667,
+        "max": 0.9969,
+        "mean_95ci": [
+          0.9868,
+          0.9946
+        ]
+      },
+      "integrated_gradients": {
+        "n": 15,
+        "mean": 0.9933,
+        "median": 0.9944,
+        "sd": 0.0047,
+        "min": 0.9842,
+        "max": 0.9984,
+        "mean_95ci": [
+          0.9909,
+          0.9955
+        ]
+      }
+    },
+    "0.1": {
+      "n_cases": 15,
+      "vanilla_gradient": {
+        "n": 15,
+        "mean": 0.9849,
+        "median": 0.9899,
+        "sd": 0.0128,
+        "min": 0.949,
+        "max": 0.9948,
+        "mean_95ci": [
+          0.978,
+          0.9904
+        ]
+      },
+      "integrated_gradients": {
+        "n": 15,
+        "mean": 0.9853,
+        "median": 0.9875,
+        "sd": 0.01,
+        "min": 0.9659,
+        "max": 0.9963,
+        "mean_95ci": [
+          0.9802,
+          0.9902
+        ]
+      }
+    },
+    "0.2": {
+      "n_cases": 15,
+      "vanilla_gradient": {
+        "n": 15,
+        "mean": 0.974,
+        "median": 0.9818,
+        "sd": 0.0205,
+        "min": 0.9232,
+        "max": 0.9913,
+        "mean_95ci": [
+          0.9628,
+          0.9831
+        ]
+      },
+      "integrated_gradients": {
+        "n": 15,
+        "mean": 0.9681,
+        "median": 0.9725,
+        "sd": 0.0219,
+        "min": 0.9277,
+        "max": 0.9916,
+        "mean_95ci": [
+          0.957,
+          0.9787
+        ]
+      }
+    }
+  },
+  "overall": {
+    "vanilla_gradient": {
+      "n": 60,
+      "mean": 0.9867,
+      "median": 0.9911,
+      "sd": 0.0153,
+      "min": 0.9232,
+      "max": 0.9992,
+      "mean_95ci": [
+        0.9826,
+        0.9903
+      ]
+    },
+    "integrated_gradients": {
+      "n": 60,
+      "mean": 0.9864,
+      "median": 0.9922,
+      "sd": 0.0168,
+      "min": 0.9277,
+      "max": 0.9997,
+      "mean_95ci": [
+        0.9821,
+        0.9903
+      ]
+    }
+  },
+  "note": "Stability is the Pearson correlation between the attribution map on the unperturbed volume and on the same volume with additive Gaussian noise, sigma expressed as a fraction of the volume's own intensity standard deviation. Correlation is null where either map is constant. Grad-CAM is excluded: its results are withdrawn, see Section 4.4.",
+  "per_case": [
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.61,
+      "vanilla_gradient_r": 0.9989365773457662,
+      "integrated_gradients_s": 111.42,
+      "integrated_gradients_r": 0.9995700368320068,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_434.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.46,
+      "vanilla_gradient_r": 0.9966364317813743,
+      "integrated_gradients_s": 113.19,
+      "integrated_gradients_r": 0.9967497148015998,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_434.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.95,
+      "vanilla_gradient_r": 0.9942394241655197,
+      "integrated_gradients_s": 114.34,
+      "integrated_gradients_r": 0.9940393388966468,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_434.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.6,
+      "vanilla_gradient_r": 0.9899939858536692,
+      "integrated_gradients_s": 110.6,
+      "integrated_gradients_r": 0.9881654147180069,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_434.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.39,
+      "vanilla_gradient_r": 0.9985950690144731,
+      "integrated_gradients_s": 108.79,
+      "integrated_gradients_r": 0.9996017178489479,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_378.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.56,
+      "vanilla_gradient_r": 0.9963174467477782,
+      "integrated_gradients_s": 108.83,
+      "integrated_gradients_r": 0.9979125198147955,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_378.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.6,
+      "vanilla_gradient_r": 0.9939548206968362,
+      "integrated_gradients_s": 108.44,
+      "integrated_gradients_r": 0.9949007964470578,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_378.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.55,
+      "vanilla_gradient_r": 0.9897582747855997,
+      "integrated_gradients_s": 113.92,
+      "integrated_gradients_r": 0.9887148059363235,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_378.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 8.84,
+      "vanilla_gradient_r": 0.9991936388793035,
+      "integrated_gradients_s": 107.0,
+      "integrated_gradients_r": 0.9996885367832541,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_426.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.07,
+      "vanilla_gradient_r": 0.9968375038827474,
+      "integrated_gradients_s": 111.22,
+      "integrated_gradients_r": 0.9975268526972875,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_426.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.26,
+      "vanilla_gradient_r": 0.9938261646556977,
+      "integrated_gradients_s": 130.3,
+      "integrated_gradients_r": 0.9942071314846459,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_426.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.33,
+      "vanilla_gradient_r": 0.9882500129699752,
+      "integrated_gradients_s": 114.49,
+      "integrated_gradients_r": 0.9871315402258004,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_426.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.16,
+      "vanilla_gradient_r": 0.9981404004189919,
+      "integrated_gradients_s": 107.11,
+      "integrated_gradients_r": 0.9987411587105176,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_181.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.82,
+      "vanilla_gradient_r": 0.9911507877028684,
+      "integrated_gradients_s": 106.39,
+      "integrated_gradients_r": 0.9913007254563638,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_181.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.22,
+      "vanilla_gradient_r": 0.9831118781810748,
+      "integrated_gradients_s": 104.29,
+      "integrated_gradients_r": 0.9822244794823939,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_181.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.15,
+      "vanilla_gradient_r": 0.9705789267990923,
+      "integrated_gradients_s": 105.96,
+      "integrated_gradients_r": 0.9659585841743464,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_181.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.72,
+      "vanilla_gradient_r": 0.9972942717416359,
+      "integrated_gradients_s": 109.5,
+      "integrated_gradients_r": 0.998509488739743,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_141.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 6.1,
+      "vanilla_gradient_r": 0.9906348382684766,
+      "integrated_gradients_s": 109.84,
+      "integrated_gradients_r": 0.9892876292716665,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_141.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.57,
+      "vanilla_gradient_r": 0.9829285147969263,
+      "integrated_gradients_s": 114.41,
+      "integrated_gradients_r": 0.9764631641009159,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_141.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.62,
+      "vanilla_gradient_r": 0.9693778376826393,
+      "integrated_gradients_s": 117.44,
+      "integrated_gradients_r": 0.9361770398670363,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_141.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.88,
+      "vanilla_gradient_r": 0.9779007152655325,
+      "integrated_gradients_s": 122.44,
+      "integrated_gradients_r": 0.9974973018250891,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_184.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 6.05,
+      "vanilla_gradient_r": 0.966680849300773,
+      "integrated_gradients_s": 122.69,
+      "integrated_gradients_r": 0.98445959651733,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_184.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.9,
+      "vanilla_gradient_r": 0.9489915537081324,
+      "integrated_gradients_s": 140.91,
+      "integrated_gradients_r": 0.9672620056207502,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_184.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 8.23,
+      "vanilla_gradient_r": 0.9231926918665044,
+      "integrated_gradients_s": 169.82,
+      "integrated_gradients_r": 0.9361971077903891,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_184.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 9.05,
+      "vanilla_gradient_r": 0.9988833151554253,
+      "integrated_gradients_s": 110.78,
+      "integrated_gradients_r": 0.9990799680129715,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_227.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 6.12,
+      "vanilla_gradient_r": 0.995261915890901,
+      "integrated_gradients_s": 113.89,
+      "integrated_gradients_r": 0.9943964886887905,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_227.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 6.01,
+      "vanilla_gradient_r": 0.9909742344787081,
+      "integrated_gradients_s": 110.39,
+      "integrated_gradients_r": 0.9875320891340423,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_227.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 6.03,
+      "vanilla_gradient_r": 0.9828489439990343,
+      "integrated_gradients_s": 113.49,
+      "integrated_gradients_r": 0.9724800594278715,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_227.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.09,
+      "vanilla_gradient_r": 0.998047872164146,
+      "integrated_gradients_s": 111.66,
+      "integrated_gradients_r": 0.9991547781501686,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_296.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.08,
+      "vanilla_gradient_r": 0.9942544367762319,
+      "integrated_gradients_s": 108.9,
+      "integrated_gradients_r": 0.9943995021753391,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_296.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 6.0,
+      "vanilla_gradient_r": 0.9898938405590438,
+      "integrated_gradients_s": 102.6,
+      "integrated_gradients_r": 0.9877269330709405,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_296.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.7,
+      "vanilla_gradient_r": 0.9818215416314212,
+      "integrated_gradients_s": 102.18,
+      "integrated_gradients_r": 0.973954703658393,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_296.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.95,
+      "vanilla_gradient_r": 0.9990339879472027,
+      "integrated_gradients_s": 102.24,
+      "integrated_gradients_r": 0.9997388554204143,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_046.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.03,
+      "vanilla_gradient_r": 0.9968969027861617,
+      "integrated_gradients_s": 103.73,
+      "integrated_gradients_r": 0.998396404863952,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_046.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.61,
+      "vanilla_gradient_r": 0.9947695963139327,
+      "integrated_gradients_s": 105.02,
+      "integrated_gradients_r": 0.9962751005979703,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_046.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.01,
+      "vanilla_gradient_r": 0.9913432985427079,
+      "integrated_gradients_s": 101.94,
+      "integrated_gradients_r": 0.9915632994090254,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_046.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 4.92,
+      "vanilla_gradient_r": 0.9979415861475832,
+      "integrated_gradients_s": 98.86,
+      "integrated_gradients_r": 0.9987606329780647,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_282.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 4.9,
+      "vanilla_gradient_r": 0.9933299787533186,
+      "integrated_gradients_s": 99.01,
+      "integrated_gradients_r": 0.9917077081580915,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_282.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.18,
+      "vanilla_gradient_r": 0.9882349464493327,
+      "integrated_gradients_s": 98.76,
+      "integrated_gradients_r": 0.9810414290501563,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_282.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 4.97,
+      "vanilla_gradient_r": 0.9793967121575125,
+      "integrated_gradients_s": 100.74,
+      "integrated_gradients_r": 0.9560815643395417,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_282.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 4.86,
+      "vanilla_gradient_r": 0.9962118583467668,
+      "integrated_gradients_s": 104.72,
+      "integrated_gradients_r": 0.9978149401761648,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_169.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.03,
+      "vanilla_gradient_r": 0.9792650739621336,
+      "integrated_gradients_s": 103.34,
+      "integrated_gradients_r": 0.984162073860062,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_169.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 4.97,
+      "vanilla_gradient_r": 0.9630281256324231,
+      "integrated_gradients_s": 103.11,
+      "integrated_gradients_r": 0.9659287656570538,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_169.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.05,
+      "vanilla_gradient_r": 0.9312036933472538,
+      "integrated_gradients_s": 103.05,
+      "integrated_gradients_r": 0.9277092133796886,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_169.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.1,
+      "vanilla_gradient_r": 0.9963191692634711,
+      "integrated_gradients_s": 104.04,
+      "integrated_gradients_r": 0.9984142665398437,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_139.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.12,
+      "vanilla_gradient_r": 0.9891019729752976,
+      "integrated_gradients_s": 103.28,
+      "integrated_gradients_r": 0.989840345025918,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_139.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.1,
+      "vanilla_gradient_r": 0.9796199141987492,
+      "integrated_gradients_s": 103.79,
+      "integrated_gradients_r": 0.9767755102038449,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_139.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.06,
+      "vanilla_gradient_r": 0.965679549736639,
+      "integrated_gradients_s": 104.16,
+      "integrated_gradients_r": 0.9500409776546893,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_139.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.95,
+      "vanilla_gradient_r": 0.9986049691593626,
+      "integrated_gradients_s": 122.77,
+      "integrated_gradients_r": 0.9996595929477722,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_464.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 6.69,
+      "vanilla_gradient_r": 0.9948400300674944,
+      "integrated_gradients_s": 116.78,
+      "integrated_gradients_r": 0.9977884144560283,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_464.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.51,
+      "vanilla_gradient_r": 0.990921947286584,
+      "integrated_gradients_s": 107.59,
+      "integrated_gradients_r": 0.995072672755341,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_464.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.26,
+      "vanilla_gradient_r": 0.9841183262474603,
+      "integrated_gradients_s": 106.85,
+      "integrated_gradients_r": 0.9897366683709437,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_464.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 5.4,
+      "vanilla_gradient_r": 0.9977532244770351,
+      "integrated_gradients_s": 107.06,
+      "integrated_gradients_r": 0.9994268542741783,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_451.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.59,
+      "vanilla_gradient_r": 0.9931227484601272,
+      "integrated_gradients_s": 108.5,
+      "integrated_gradients_r": 0.9966315483550671,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_451.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.28,
+      "vanilla_gradient_r": 0.988507686423095,
+      "integrated_gradients_s": 108.4,
+      "integrated_gradients_r": 0.9926021276245113,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_451.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.27,
+      "vanilla_gradient_r": 0.9809485474620332,
+      "integrated_gradients_s": 106.48,
+      "integrated_gradients_r": 0.9849023936871768,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_451.npy"
+    },
+    {
+      "sigma": 0.01,
+      "vanilla_gradient_s": 6.09,
+      "vanilla_gradient_r": 0.9986955235852816,
+      "integrated_gradients_s": 108.3,
+      "integrated_gradients_r": 0.9992548071766655,
+      "cohort": "stability",
+      "fold": "0.01",
+      "case": "BRATS_204.npy"
+    },
+    {
+      "sigma": 0.05,
+      "vanilla_gradient_s": 5.35,
+      "vanilla_gradient_r": 0.9946366528868494,
+      "integrated_gradients_s": 108.5,
+      "integrated_gradients_r": 0.9944919803856584,
+      "cohort": "stability",
+      "fold": "0.05",
+      "case": "BRATS_204.npy"
+    },
+    {
+      "sigma": 0.1,
+      "vanilla_gradient_s": 5.47,
+      "vanilla_gradient_r": 0.9901454699583617,
+      "integrated_gradients_s": 109.09,
+      "integrated_gradients_r": 0.9874657572867227,
+      "cohort": "stability",
+      "fold": "0.1",
+      "case": "BRATS_204.npy"
+    },
+    {
+      "sigma": 0.2,
+      "vanilla_gradient_s": 5.62,
+      "vanilla_gradient_r": 0.9820609223572312,
+      "integrated_gradients_s": 108.04,
+      "integrated_gradients_r": 0.9722071697275041,
+      "cohort": "stability",
+      "fold": "0.2",
+      "case": "BRATS_204.npy"
+    }
+  ]
+}

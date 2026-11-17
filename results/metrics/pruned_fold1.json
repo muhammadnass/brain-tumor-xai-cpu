@@ -1,0 +1,184 @@
+{
+  "provenance": {
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 1,
+      "epoch": 12,
+      "val_dice": 0.7666977578856796,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    }
+  },
+  "checkpoint_meta": {
+    "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+    "features": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "fold": 1,
+    "epoch": 12,
+    "val_dice": 0.7666977578856796,
+    "threshold": 0.5,
+    "parameters_total": 22627875
+  },
+  "parameters": {
+    "intact_total": 22627875,
+    "bottleneck": 10619904,
+    "bottleneck_fraction": 0.469328,
+    "upconv0": 1048832,
+    "upconv0_fraction": 0.046351,
+    "constant_retained": 256,
+    "removed_net": 11668736,
+    "pruned_total": 10959139,
+    "reduction_fraction": 0.51568
+  },
+  "storage": {
+    "intact_parameter_mib": 86.32,
+    "intact_parameter_plus_buffer_mib": 86.34,
+    "pruned_parameter_mib": 41.81,
+    "pruned_parameter_plus_buffer_mib": 41.82,
+    "note": "Section 4.6 of the manuscript reports 86.32 MiB, which is the parameter tensors alone in single precision. intact_parameter_mib is the directly comparable figure."
+  },
+  "bottleneck_batchnorm": {
+    "bn1": {
+      "channels": 512,
+      "gamma_mean_abs": 0.31517553329467773,
+      "gamma_max_abs": 0.3152076303958893,
+      "beta_mean_abs": 3.1325742426133335e-37,
+      "beta_max_abs": 6.972698832066182e-37,
+      "running_mean_max_abs": 3.8972866613321327e-35,
+      "running_var_min": 5.605193857299268e-45,
+      "running_var_max": 5.605193857299268e-45,
+      "eps": 1e-05
+    },
+    "bn2": {
+      "channels": 512,
+      "gamma_mean_abs": 0.31517523527145386,
+      "gamma_max_abs": 0.3152085840702057,
+      "beta_mean_abs": 3.174415893719301e-37,
+      "beta_max_abs": 6.963524250760555e-37,
+      "running_mean_max_abs": 6.680369138956665e-37,
+      "running_var_min": 5.605193857299268e-45,
+      "running_var_max": 5.605193857299268e-45,
+      "eps": 1e-05
+    }
+  },
+  "equivalence": {
+    "n_synthetic": 4,
+    "n_real": 0,
+    "worst_max_abs_logit_diff_vs_ablated": 0.0,
+    "worst_max_abs_logit_diff_vs_intact": 0.0,
+    "total_mask_disagreements_vs_ablated": 0,
+    "total_mask_disagreements_vs_intact": 0,
+    "all_outputs_bitwise_identical_to_ablated": true,
+    "per_input": [
+      {
+        "input": "synthetic-1",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "synthetic-2",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "synthetic-3",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "synthetic-4",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      }
+    ]
+  },
+  "latency": {
+    "intact": {
+      "repeats": 5,
+      "median_s": 2.6472,
+      "mean_s": 2.694,
+      "min_s": 2.5192,
+      "max_s": 2.9399,
+      "sd_s": 0.1554
+    },
+    "pruned": {
+      "repeats": 5,
+      "median_s": 2.2561,
+      "mean_s": 2.2605,
+      "min_s": 2.2176,
+      "max_s": 2.307,
+      "sd_s": 0.037
+    },
+    "median_ratio_pruned_over_intact": 0.8523
+  },
+  "saved_model": {
+    "path": "models/segmentation/unet3d_pruned_fold1.pth",
+    "file_bytes": 43904456,
+    "file_mib": 41.87
+  },
+  "prior_ablation_on_record": {
+    "source": "results/metrics/ablation_fold{0,1,2}.json",
+    "fold0": {
+      "n": 162,
+      "intact_mean_dice": 0.729458,
+      "ablated_mean_dice": 0.729458,
+      "cases_changed": 0,
+      "max_abs_change": 0.0
+    },
+    "fold1": {
+      "n": 161,
+      "intact_mean_dice": 0.766698,
+      "ablated_mean_dice": 0.766698,
+      "cases_changed": 0,
+      "max_abs_change": 0.0
+    },
+    "fold2": {
+      "n": 161,
+      "intact_mean_dice": 0.741833,
+      "ablated_mean_dice": 0.741833,
+      "cases_changed": 0,
+      "max_abs_change": 0.0
+    },
+    "note": "These three runs established that forcing the bottleneck output to zero changes no prediction on any of the 484 held-out cases. This script establishes that the pruned network reproduces that zero-ablated network exactly. The two together give the pruned network's accuracy on all 484 cases without retraining."
+  },
+  "interpretation": "The equivalence claim holds if all_outputs_bitwise_identical_to_ablated is true and total_mask_disagreements_vs_intact is zero. The removed stages operate at 4^3 and 8^3 resolution, so the expected gain is in parameter count and stored size rather than latency; report it that way.",
+  "peak_rss_mib": 1529.7
+}

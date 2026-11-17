@@ -1,0 +1,498 @@
+{
+  "provenance": {
+    "cwd": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 1,
+      "epoch": 12,
+      "val_dice": 0.7666977578856796,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    },
+    "fold_splits": {
+      "1": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 1,
+        "n_train": 323,
+        "n_val": 161,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      }
+    },
+    "case_source": "fold 1 validation split",
+    "gradcam_implementation": "xai_explainers.attention_visualizer.GradCAM3D via GradCAM3D(model, layer_name), called as generate_cam(x, target_class)",
+    "implementations": {
+      "grad_cam": "xai_explainers.attention_visualizer:GradCAM3D.generate_cam(x, target_class)",
+      "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, target_class)",
+      "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, target_class)"
+    },
+    "ig_steps_at_construction": 20,
+    "input_shape": [
+      1,
+      4,
+      128,
+      128,
+      128
+    ]
+  },
+  "hardware": {
+    "processor": "x86_64",
+    "python": "3.12.3",
+    "torch": "2.5.1+cpu",
+    "threads": 8,
+    "cpu_mhz_at_start": 532.6,
+    "cpu_mhz_at_end": 2601.6,
+    "load_average_1min": 6.96728515625
+  },
+  "model": {
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 1,
+      "epoch": 12,
+      "val_dice": 0.7666977578856796,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    },
+    "parameters_total": 22627875,
+    "parameters_trainable": 22627875,
+    "weights_only_bytes": 90511500,
+    "weights_only_MiB": 86.32,
+    "checkpoint_file_bytes": 271697534,
+    "checkpoint_file_MiB": 259.11,
+    "checkpoint_contains_optimiser_state": true,
+    "checkpoint_keys": [
+      "epoch",
+      "features",
+      "fold",
+      "model_state_dict",
+      "optimizer_state_dict",
+      "threshold",
+      "val_dice"
+    ],
+    "size_note": "Quote weights_only_MiB as the model size. The checkpoint file also stores optimiser state and is about three times larger for Adam."
+  },
+  "implementations": {
+    "grad_cam": "xai_explainers.attention_visualizer:GradCAM3D.generate_cam(x, target_class)",
+    "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, target_class)",
+    "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, target_class)"
+  },
+  "config": {
+    "cases": 10,
+    "repeats": 3,
+    "warmup": 2,
+    "ig_steps": 20,
+    "target_class": 1,
+    "gradcam_layer": "bottleneck"
+  },
+  "results": {
+    "inference": {
+      "n": 10,
+      "mean_s": 2.2473,
+      "sd_s": 0.1087,
+      "median_s": 2.2292,
+      "min_s": 2.0586,
+      "max_s": 2.4604
+    },
+    "explanation": {
+      "grad_cam": {
+        "n": 10,
+        "mean_s": 9.1782,
+        "sd_s": 0.2252,
+        "median_s": 9.1749,
+        "min_s": 8.8889,
+        "max_s": 9.5296,
+        "degenerate_cases": 0
+      },
+      "vanilla_gradient": {
+        "n": 10,
+        "mean_s": 8.9598,
+        "sd_s": 0.2626,
+        "median_s": 8.9484,
+        "min_s": 8.5759,
+        "max_s": 9.4559,
+        "degenerate_cases": 0
+      },
+      "integrated_gradients": {
+        "n": 10,
+        "mean_s": 177.9306,
+        "sd_s": 1.6373,
+        "median_s": 177.7717,
+        "min_s": 175.2672,
+        "max_s": 180.9068,
+        "degenerate_cases": 0
+      }
+    }
+  },
+  "peak_rss_MiB_this_process": 3116.3,
+  "per_case": [
+    {
+      "case": "BRATS_295.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.0541,
+        "sd_s": 0.0199,
+        "median_s": 2.0586,
+        "min_s": 2.0323,
+        "max_s": 2.0713
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.4032,
+        "sd_s": 0.2377,
+        "median_s": 9.496,
+        "min_s": 9.1331,
+        "max_s": 9.5806
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 9.1466,
+        "sd_s": 0.285,
+        "median_s": 9.0092,
+        "min_s": 8.9565,
+        "max_s": 9.4743
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 180.9093,
+        "sd_s": 1.5099,
+        "median_s": 180.9068,
+        "min_s": 179.4006,
+        "max_s": 182.4204
+      }
+    },
+    {
+      "case": "BRATS_474.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.2222,
+        "sd_s": 0.0378,
+        "median_s": 2.2085,
+        "min_s": 2.1932,
+        "max_s": 2.265
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.3645,
+        "sd_s": 0.1077,
+        "median_s": 9.3105,
+        "min_s": 9.2945,
+        "max_s": 9.4885
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 8.8243,
+        "sd_s": 0.1589,
+        "median_s": 8.9095,
+        "min_s": 8.641,
+        "max_s": 8.9226
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 177.0055,
+        "sd_s": 0.3968,
+        "median_s": 177.2211,
+        "min_s": 176.5476,
+        "max_s": 177.2478
+      }
+    },
+    {
+      "case": "BRATS_153.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.4285,
+        "sd_s": 0.1377,
+        "median_s": 2.3597,
+        "min_s": 2.3387,
+        "max_s": 2.5871
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.0551,
+        "sd_s": 0.2254,
+        "median_s": 9.1256,
+        "min_s": 8.8029,
+        "max_s": 9.2368
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 9.0073,
+        "sd_s": 0.2645,
+        "median_s": 8.9874,
+        "min_s": 8.7532,
+        "max_s": 9.2812
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 178.1723,
+        "sd_s": 1.939,
+        "median_s": 177.7333,
+        "min_s": 176.4904,
+        "max_s": 180.2932
+      }
+    },
+    {
+      "case": "BRATS_363.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.2878,
+        "sd_s": 0.0635,
+        "median_s": 2.2581,
+        "min_s": 2.2446,
+        "max_s": 2.3607
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.5577,
+        "sd_s": 0.3388,
+        "median_s": 9.5296,
+        "min_s": 9.2338,
+        "max_s": 9.9096
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 9.3591,
+        "sd_s": 0.3519,
+        "median_s": 9.4559,
+        "min_s": 8.9689,
+        "max_s": 9.6524
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 178.4369,
+        "sd_s": 0.4675,
+        "median_s": 178.6502,
+        "min_s": 177.9007,
+        "max_s": 178.7597
+      }
+    },
+    {
+      "case": "BRATS_293.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.2311,
+        "sd_s": 0.0381,
+        "median_s": 2.2107,
+        "min_s": 2.2076,
+        "max_s": 2.2751
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.2963,
+        "sd_s": 0.2905,
+        "median_s": 9.2435,
+        "min_s": 9.0358,
+        "max_s": 9.6096
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 8.91,
+        "sd_s": 0.0832,
+        "median_s": 8.8952,
+        "min_s": 8.8352,
+        "max_s": 8.9996
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 180.0542,
+        "sd_s": 2.1284,
+        "median_s": 179.102,
+        "min_s": 178.5682,
+        "max_s": 182.4925
+      }
+    },
+    {
+      "case": "BRATS_177.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.3,
+        "sd_s": 0.0351,
+        "median_s": 2.2935,
+        "min_s": 2.2685,
+        "max_s": 2.3379
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 8.8886,
+        "sd_s": 0.0339,
+        "median_s": 8.8889,
+        "min_s": 8.8545,
+        "max_s": 8.9222
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 9.2155,
+        "sd_s": 0.1521,
+        "median_s": 9.2679,
+        "min_s": 9.0442,
+        "max_s": 9.3344
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 178.03,
+        "sd_s": 0.5812,
+        "median_s": 177.8102,
+        "min_s": 177.5908,
+        "max_s": 178.689
+      }
+    },
+    {
+      "case": "BRATS_052.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.2393,
+        "sd_s": 0.0238,
+        "median_s": 2.2402,
+        "min_s": 2.2151,
+        "max_s": 2.2626
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.1885,
+        "sd_s": 0.1812,
+        "median_s": 9.2243,
+        "min_s": 8.992,
+        "max_s": 9.3492
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 8.9802,
+        "sd_s": 0.1943,
+        "median_s": 9.0164,
+        "min_s": 8.7704,
+        "max_s": 9.1539
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 180.2305,
+        "sd_s": 1.9064,
+        "median_s": 179.2567,
+        "min_s": 179.0078,
+        "max_s": 182.4271
+      }
+    },
+    {
+      "case": "BRATS_362.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.25,
+        "sd_s": 0.0692,
+        "median_s": 2.2181,
+        "min_s": 2.2026,
+        "max_s": 2.3295
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.1275,
+        "sd_s": 0.2365,
+        "median_s": 9.0227,
+        "min_s": 8.9616,
+        "max_s": 9.3984
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 8.8884,
+        "sd_s": 0.1203,
+        "median_s": 8.8476,
+        "min_s": 8.7939,
+        "max_s": 9.0238
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 177.4725,
+        "sd_s": 0.7919,
+        "median_s": 177.3258,
+        "min_s": 176.7641,
+        "max_s": 178.3275
+      }
+    },
+    {
+      "case": "BRATS_335.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.1661,
+        "sd_s": 0.0351,
+        "median_s": 2.1654,
+        "min_s": 2.1313,
+        "max_s": 2.2015
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 8.791,
+        "sd_s": 0.2329,
+        "median_s": 8.8965,
+        "min_s": 8.5241,
+        "max_s": 8.9525
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 8.5282,
+        "sd_s": 0.1049,
+        "median_s": 8.5759,
+        "min_s": 8.4079,
+        "max_s": 8.6007
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 176.3092,
+        "sd_s": 3.487,
+        "median_s": 175.2672,
+        "min_s": 173.4619,
+        "max_s": 180.1983
+      }
+    },
+    {
+      "case": "BRATS_483.npy",
+      "inference_s": {
+        "n": 3,
+        "mean_s": 2.4211,
+        "sd_s": 0.1831,
+        "median_s": 2.4604,
+        "min_s": 2.2215,
+        "max_s": 2.5814
+      },
+      "grad_cam_s": {
+        "n": 3,
+        "mean_s": 9.0622,
+        "sd_s": 0.1764,
+        "median_s": 9.0441,
+        "min_s": 8.8955,
+        "max_s": 9.247
+      },
+      "vanilla_gradient_s": {
+        "n": 3,
+        "mean_s": 8.63,
+        "sd_s": 0.0297,
+        "median_s": 8.6332,
+        "min_s": 8.5989,
+        "max_s": 8.658
+      },
+      "integrated_gradients_s": {
+        "n": 3,
+        "mean_s": 175.5424,
+        "sd_s": 1.1736,
+        "median_s": 176.0323,
+        "min_s": 174.2032,
+        "max_s": 176.3917
+      }
+    }
+  ]
+}

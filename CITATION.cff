@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the manuscript below."
+title: "Resource Efficient, Multi-Method Explainable AI for Brain Tumor Segmentation with Cross-Population Validation"
+abstract: >-
+  Reference implementation of a CPU-only explainable AI framework for
+  three-dimensional brain tumor segmentation, with multi-method gradient
+  attribution, deployment-consistency verification, exact training-free pruning
+  of an inactive network stage, and external cross-population evaluation.
+type: software
+license: MIT
+repository-code: "https://github.com/muhammadnass/brain-tumor-xai-cpu"
+authors:
+  - family-names: Rasheed
+    given-names: Rasheed Abubakar
+  - family-names: Nasir
+    given-names: Muhammad Sanusi
+  - family-names: Kamsin
+    given-names: Amirrudin
+  - family-names: Ismail
+    given-names: Nasiru Jinjiri
+keywords:
+  - brain tumor segmentation
+  - explainable artificial intelligence
+  - 3D U-Net
+  - CPU inference
+  - cross-population validation
+  - network pruning
+preferred-citation:
+  type: article
+  title: "Resource Efficient, Multi-Method Explainable AI for Brain Tumor Segmentation with Cross-Population Validation"
+  journal: "IEEE Access"
+  year: 2026
+  notes: "Manuscript under review (Access-2026-53071)."
+  authors:
+    - family-names: Rasheed
+      given-names: Rasheed Abubakar
+    - family-names: Nasir
+      given-names: Muhammad Sanusi
+    - family-names: Kamsin
+      given-names: Amirrudin
+    - family-names: Ismail
+      given-names: Nasiru Jinjiri
+references:
+  - type: data
+    title: "Medical Segmentation Decathlon, Task01_BrainTumour"
+    url: "https://registry.opendata.aws/msd/"
+    license: CC-BY-SA-4.0
+    notes: "Open access. Used for all training, explainability and benchmark experiments."
+  - type: data
+    title: "BraTS-Africa"
+    url: "https://www.synapse.org/Synapse:syn51156910"
+    notes: "Restricted. Requires a Synapse account and data-use agreement. Used only for external cross-population evaluation."

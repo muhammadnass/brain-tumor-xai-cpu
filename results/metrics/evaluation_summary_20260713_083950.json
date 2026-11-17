@@ -1,0 +1,34 @@
+[
+  {
+    "threshold": 0.5,
+    "n_cases": 6,
+    "dice_mean": 0.27921489377816516,
+    "dice_std": 0.2562528384403471,
+    "iou_mean": 0.19353421685484892,
+    "iou_std": 0.21202889951201573,
+    "sensitivity_mean": 0.2983789381881555,
+    "sensitivity_std": 0.27267284139575565,
+    "specificity_mean": 0.9982075095176697,
+    "specificity_std": 0.0011541072936070438,
+    "precision_mean": 0.4059652090072632,
+    "precision_std": 0.3466932667900044,
+    "hausdorff95_mean": 47.91891129811605,
+    "hausdorff95_std": 21.04024559557631
+  },
+  {
+    "threshold": 0.995,
+    "n_cases": 6,
+    "dice_mean": 0.0004901960880185167,
+    "dice_std": 0.0010961117751138736,
+    "iou_mean": 0.00024545901315330826,
+    "iou_std": 0.0005488630391008122,
+    "sensitivity_mean": 0.0002454590091171364,
+    "sensitivity_std": 0.0005488630300756576,
+    "specificity_mean": 1.0,
+    "specificity_std": 0.0,
+    "precision_mean": 1.0,
+    "precision_std": 0.0,
+    "hausdorff95_mean": 23.280893325805664,
+    "hausdorff95_std": 0.0
+  }
+]

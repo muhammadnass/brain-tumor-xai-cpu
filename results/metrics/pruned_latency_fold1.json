@@ -1,0 +1,192 @@
+{
+  "provenance": {
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 1,
+      "epoch": 12,
+      "val_dice": 0.7666977578856796,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    }
+  },
+  "checkpoint_meta": {
+    "checkpoint": "models/segmentation/unet3d_cv_fold1.pth",
+    "features": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "fold": 1,
+    "epoch": 12,
+    "val_dice": 0.7666977578856796,
+    "threshold": 0.5,
+    "parameters_total": 22627875
+  },
+  "design": {
+    "interleaved": true,
+    "within_pair_order_alternated": true,
+    "repeats": 25,
+    "warmup_per_model": 3,
+    "input_shape": [
+      1,
+      4,
+      128,
+      128,
+      128
+    ],
+    "threads": 8,
+    "fixed_input": true,
+    "rationale": "Paired, interleaved design so that thermal drift between pairs cannot bias the within-pair difference; within-pair order alternates so neither model is systematically measured on the warmer core."
+  },
+  "parameters": {
+    "intact": 22627875,
+    "pruned": 10959139,
+    "removed": 11668736
+  },
+  "intact_s": {
+    "median": 2.447,
+    "mean": 2.5274,
+    "sd": 0.1726,
+    "min": 2.352,
+    "max": 2.87,
+    "median_95ci": [
+      2.42076,
+      2.487722
+    ],
+    "drift_s_per_repeat": 0.00100756
+  },
+  "pruned_s": {
+    "median": 2.2552,
+    "mean": 2.3302,
+    "sd": 0.1432,
+    "min": 2.1852,
+    "max": 2.6285,
+    "median_95ci": [
+      2.233943,
+      2.348504
+    ],
+    "drift_s_per_repeat": 0.00382345
+  },
+  "paired": {
+    "median_difference_s": 0.1959,
+    "median_difference_95ci": [
+      0.169445,
+      0.241523
+    ],
+    "mean_difference_s": 0.1972,
+    "median_ratio_pruned_over_intact": 0.9185,
+    "median_ratio_95ci": [
+      0.903699,
+      0.930003
+    ],
+    "median_reduction_percent": 8.15,
+    "pairs_pruned_faster": 23,
+    "pairs_intact_faster": 2,
+    "n_pairs": 25,
+    "wilcoxon": {
+      "statistic": 6.0,
+      "p_two_sided": 8.344650268554688e-07,
+      "backend": "scipy.stats.wilcoxon"
+    }
+  },
+  "order_effect": {
+    "median_diff_when_intact_first": 0.1959,
+    "median_diff_when_pruned_first": 0.1917,
+    "note": "These two medians should agree. A systematic gap between them would mean the within-pair order still influences the measurement, and the headline figure should not be trusted."
+  },
+  "raw": {
+    "intact_s": [
+      2.437091,
+      2.487722,
+      2.476767,
+      2.864006,
+      2.75993,
+      2.410723,
+      2.423629,
+      2.417482,
+      2.391967,
+      2.42076,
+      2.447018,
+      2.685467,
+      2.869981,
+      2.443886,
+      2.403229,
+      2.397175,
+      2.379959,
+      2.435112,
+      2.479183,
+      2.48096,
+      2.546041,
+      2.846294,
+      2.858654,
+      2.351981,
+      2.469544
+    ],
+    "pruned_s": [
+      2.247118,
+      2.279095,
+      2.348504,
+      2.551817,
+      2.279902,
+      2.22993,
+      2.185228,
+      2.233943,
+      2.255161,
+      2.251315,
+      2.289891,
+      2.325029,
+      2.628457,
+      2.573771,
+      2.207361,
+      2.222291,
+      2.231077,
+      2.235261,
+      2.220195,
+      2.242041,
+      2.487554,
+      2.509077,
+      2.604637,
+      2.430147,
+      2.18625
+    ],
+    "order": [
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first",
+      "pruned_first",
+      "intact_first"
+    ]
+  },
+  "interpretation": "Report median_ratio_pruned_over_intact with its interval, or equivalently median_reduction_percent. The reduction arises because the removed stages hold 11.67 million weights that no longer have to be streamed from memory on each forward pass; it is a memory-bandwidth effect, not a reduction in arithmetic, since the removed stages operate at 4^3 and 8^3 resolution."
+}

@@ -1,0 +1,92 @@
+# ---------------------------------------------------------------------------
+# Imaging data. Neither dataset may be redistributed from this repository.
+# ---------------------------------------------------------------------------
+data/*
+!data/brats_dataset/
+data/brats_dataset/*
+!data/brats_dataset/folds_seed42_3fold.json
+*.nii
+*.nii.gz
+*.dcm
+*.tar
+*.npy
+
+# ---------------------------------------------------------------------------
+# Model weights. Distributed as release assets, not in the git tree.
+# ---------------------------------------------------------------------------
+*.pth
+*.pt
+*.model
+*.bak
+
+# ---------------------------------------------------------------------------
+# Results. The JSON metrics ARE published -- they are what the manuscript was
+# written from. Logs and progress files are not.
+# ---------------------------------------------------------------------------
+results/*
+!results/metrics/
+results/metrics/*
+!results/metrics/*.json
+*.progress.jsonl
+logs/
+*.log
+
+# ---------------------------------------------------------------------------
+# Clinician-evaluation data. Held locally, never published.
+# ---------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+instance/
+uploads/
+exports/
+
+# ---------------------------------------------------------------------------
+# Secrets
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+tunnel/
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---------------------------------------------------------------------------
+# Stray pip artefacts seen in the working tree (e.g. "=0.19.0", "threshold")
+# ---------------------------------------------------------------------------
+=*
+>=*
+<=*
+threshold
+
+# ---------------------------------------------------------------------------
+# Editors and OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db

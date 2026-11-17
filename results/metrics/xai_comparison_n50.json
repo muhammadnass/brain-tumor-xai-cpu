@@ -1,0 +1,858 @@
+{
+  "provenance": {
+    "fold": 0,
+    "target_class": 1,
+    "threshold": 0.5,
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    },
+    "fold_splits": {
+      "0": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 0,
+        "n_train": 322,
+        "n_val": 162,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      }
+    },
+    "implementations": {
+      "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, cls)",
+      "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, cls)"
+    },
+    "grad_cam": "excluded: withdrawn, see Section 4.4",
+    "progress_file": "results/metrics/xai_n50.progress.jsonl"
+  },
+  "implementations": {
+    "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, cls)",
+    "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, cls)"
+  },
+  "fingerprint": {
+    "checkpoint": {
+      "path": "/home/muhammad-sanusi/neurosurgery-xai-planning/models/segmentation/unet3d_cv_fold0.pth",
+      "sha256": "d26a1533e784f6f138c9b1236b6e0c07dcc46bf50028bf7d89d8b10814562519"
+    },
+    "folds": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/folds_seed42_3fold.json",
+    "fold": 0,
+    "cache": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/cache_128",
+    "target_class": 1,
+    "ig_steps": 20,
+    "methods": [
+      "vanilla_gradient",
+      "integrated_gradients"
+    ]
+  },
+  "n_cases": 50,
+  "agreement_pearson": {
+    "n": 50,
+    "mean": 0.6014,
+    "median": 0.665,
+    "sd": 0.1776,
+    "min": 0.1234,
+    "max": 0.8116,
+    "mean_95ci": [
+      0.5523,
+      0.6497
+    ]
+  },
+  "degenerate": {
+    "vanilla_gradient": 0,
+    "integrated_gradients": 0
+  },
+  "latency_s": {
+    "vanilla_gradient": {
+      "n": 50,
+      "mean": 5.1354,
+      "median": 5.11,
+      "sd": 0.2328,
+      "min": 4.75,
+      "max": 5.98,
+      "mean_95ci": [
+        5.0734,
+        5.201
+      ]
+    },
+    "integrated_gradients": {
+      "n": 50,
+      "mean": 102.7986,
+      "median": 101.99,
+      "sd": 3.1832,
+      "min": 98.55,
+      "max": 116.77,
+      "mean_95ci": [
+        102.0002,
+        103.7418
+      ]
+    }
+  },
+  "undefined_correlations": 0,
+  "note": "Correlation is undefined where either map is constant and is recorded as null rather than zero. Grad-CAM is excluded: its results are withdrawn, see Section 4.4.",
+  "per_case": [
+    {
+      "vanilla_gradient_s": 5.11,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 115.6,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6668177664004663,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_434.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.88,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 116.77,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7219448641315355,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_378.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.98,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 108.22,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7549139532543936,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_426.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.93,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 103.44,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7642800603848163,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_181.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.22,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 103.15,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5517899145516355,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_141.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.75,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.41,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.16875382896724683,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_184.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.97,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.61,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7102291846206276,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_227.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.81,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.54,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.730154087413623,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_296.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.84,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 104.06,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7960060126517932,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_046.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.84,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 100.75,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.39569679476512487,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_282.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.03,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.79,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.3958570545408752,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_169.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.18,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.95,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5367289897936529,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_139.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.07,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.0,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7319264235888311,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_464.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.18,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.84,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6964720062242409,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_451.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.16,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 103.02,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7096583718783551,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_204.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.14,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.98,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.43781049700207253,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_233.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.11,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.48,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.2741215780405684,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_199.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.9,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 98.55,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5834766262250964,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_056.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.2,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.62,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7875301490301296,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_034.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.2,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.99,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.721378610379203,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_244.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.08,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.09,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7316307415270704,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_235.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.15,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.52,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.34996982960637385,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_021.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.91,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 99.24,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5029881119150267,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_443.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.06,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.19,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5782268504701861,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_160.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.14,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.93,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7653930763275261,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_320.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.03,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.43,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.8115774224892863,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_422.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.94,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.24,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.12336219012493506,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_413.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.19,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.5,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.3778793178933516,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_270.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.09,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.5,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6988808228513111,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_281.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.87,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.13,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.3108754961288303,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_179.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.2,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 103.12,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.46744436484377205,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_245.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.17,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.51,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5719852656728436,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_078.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.04,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.49,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.746835783073786,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_205.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.16,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.4,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.49496069439112617,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_027.npy"
+    },
+    {
+      "vanilla_gradient_s": 4.95,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.8,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.3059550975628243,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_430.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.09,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.08,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7846056205098273,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_383.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.41,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.41,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6373983414385219,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_329.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.07,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.77,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7693403880621558,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_412.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.28,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.54,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6514798621581313,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_403.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.02,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 99.53,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6862021916853678,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_351.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.11,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.05,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.752479819418708,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_051.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.12,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.45,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.762843967775207,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_358.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.1,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 102.71,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7863118393972582,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_284.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.11,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.71,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.4929391245370325,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_243.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.01,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.26,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.79255774262077,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_339.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.11,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 101.76,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5215692275899008,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_102.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.11,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 104.14,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.6631875305367769,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_203.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.31,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 105.02,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.4893149093317638,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_165.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.09,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 104.19,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.60324891643781,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_346.npy"
+    },
+    {
+      "vanilla_gradient_s": 5.35,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 106.45,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.7052560972208274,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_009.npy"
+    }
+  ]
+}

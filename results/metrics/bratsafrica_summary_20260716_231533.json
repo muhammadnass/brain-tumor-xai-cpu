@@ -1,0 +1,11 @@
+{
+  "n_cases": 30,
+  "dice_mean": 0.5293983271810976,
+  "dice_std": 0.2796246482785359,
+  "sensitivity_mean": 0.7715531747199527,
+  "sensitivity_std": 0.25122030930066563,
+  "precision_mean": 0.4763646869597497,
+  "precision_std": 0.29248822753143666,
+  "comparison_decathlon_dice_mean": 0.478,
+  "comparison_decathlon_dice_std": 0.224
+}

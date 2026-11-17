@@ -1,0 +1,333 @@
+{
+  "provenance": {
+    "fold": 0,
+    "target_class": 1,
+    "threshold": 0.5,
+    "project_root": "/home/muhammad-sanusi/neurosurgery-xai-planning",
+    "model_source": "ai_models.segmentation.UNet3D",
+    "checkpoint_meta": {
+      "checkpoint": "models/segmentation/unet3d_cv_fold0.pth",
+      "features": [
+        16,
+        32,
+        64,
+        128,
+        256
+      ],
+      "fold": 0,
+      "epoch": 9,
+      "val_dice": 0.729457809396354,
+      "threshold": 0.5,
+      "parameters_total": 22627875
+    },
+    "fold_splits": {
+      "0": {
+        "folds_file": "data/brats_dataset/folds_seed42_3fold.json",
+        "structure": "cfg['folds'] list",
+        "fold": 0,
+        "n_train": 322,
+        "n_val": 162,
+        "seed": 42,
+        "n_folds": 3,
+        "n_cases": 484
+      }
+    },
+    "implementations": {
+      "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, cls)",
+      "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, cls)"
+    },
+    "grad_cam": "excluded: withdrawn, see Section 4.4",
+    "progress_file": "results/metrics/xai_comparison_n15.progress.jsonl"
+  },
+  "implementations": {
+    "vanilla_gradient": "xai_explainers.gradient_methods:VanillaGradient.generate(x, cls)",
+    "integrated_gradients": "xai_explainers.gradient_methods:IntegratedGradients(steps=20).generate(x, cls)"
+  },
+  "fingerprint": {
+    "checkpoint": {
+      "path": "/home/muhammad-sanusi/neurosurgery-xai-planning/models/segmentation/unet3d_cv_fold0.pth",
+      "sha256": "d26a1533e784f6f138c9b1236b6e0c07dcc46bf50028bf7d89d8b10814562519"
+    },
+    "folds": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/folds_seed42_3fold.json",
+    "fold": 0,
+    "cache": "/home/muhammad-sanusi/neurosurgery-xai-planning/data/brats_dataset/cache_128",
+    "target_class": 1,
+    "ig_steps": 20,
+    "methods": [
+      "vanilla_gradient",
+      "integrated_gradients"
+    ]
+  },
+  "n_cases": 15,
+  "agreement_pearson": {
+    "n": 15,
+    "mean": 0.32,
+    "median": 0.3332,
+    "sd": 0.1194,
+    "min": 0.1356,
+    "max": 0.5394,
+    "mean_95ci": [
+      0.2614,
+      0.3782
+    ]
+  },
+  "degenerate": {
+    "vanilla_gradient": 0,
+    "integrated_gradients": 0
+  },
+  "latency_s": {
+    "vanilla_gradient": {
+      "n": 15,
+      "mean": 9.55,
+      "median": 9.51,
+      "sd": 0.1784,
+      "min": 9.23,
+      "max": 10.02,
+      "mean_95ci": [
+        9.4687,
+        9.6413
+      ]
+    },
+    "integrated_gradients": {
+      "n": 15,
+      "mean": 191.8033,
+      "median": 191.53,
+      "sd": 1.8802,
+      "min": 187.99,
+      "max": 195.8,
+      "mean_95ci": [
+        190.9087,
+        192.7127
+      ]
+    }
+  },
+  "undefined_correlations": 0,
+  "note": "Correlation is undefined where either map is constant and is recorded as null rather than zero. Grad-CAM is excluded: its results are withdrawn, see Section 4.4.",
+  "per_case": [
+    {
+      "vanilla_gradient_s": 9.5,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 191.53,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.22848881792522707,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_434.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.49,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 190.73,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.1461886995628727,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_378.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.62,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 190.85,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.34137391890074065,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_426.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.49,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 191.9,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.47789385055898037,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_181.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.7,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 193.58,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.3673992457857449,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_141.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.73,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 193.4,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.23054975410340306,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_184.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.46,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 190.76,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.5393564686933773,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_227.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.56,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 192.5,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.19130842681533483,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_296.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.39,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 187.99,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.1356348921480754,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_046.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.23,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 190.93,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.4002413136446368,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_282.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.56,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 190.17,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.3332160988571484,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_169.npy"
+    },
+    {
+      "vanilla_gradient_s": 10.02,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 191.92,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.37945591130358797,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_139.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.42,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 194.1,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.2819550662989648,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_464.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.57,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 190.89,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.30517785288062543,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_451.npy"
+    },
+    {
+      "vanilla_gradient_s": 9.51,
+      "vanilla_gradient_degenerate": false,
+      "integrated_gradients_s": 195.8,
+      "integrated_gradients_degenerate": false,
+      "shape": [
+        128,
+        128,
+        128
+      ],
+      "pearson_vg_ig": 0.44178951966688623,
+      "cohort": "agreement",
+      "fold": 0,
+      "case": "BRATS_204.npy"
+    }
+  ]
+}

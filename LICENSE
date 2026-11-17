@@ -1,0 +1,40 @@
+MIT License
+
+Copyright (c) 2026 Rasheed Abubakar Rasheed, Muhammad Sanusi Nasir,
+Amirrudin Kamsin, Nasiru Jinjiri Ismail
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+NOTE ON SCOPE
+
+This licence covers the source code in this repository only.
+
+The datasets used in this work are NOT covered and are NOT redistributed here:
+
+  * Medical Segmentation Decathlon (Task01_BrainTumour) is distributed by its
+    own providers under CC BY-SA 4.0. See https://registry.opendata.aws/msd/
+
+  * BraTS-Africa is distributed through Synapse (syn51156910) under a
+    data-use agreement and may not be redistributed. Obtain it directly.
+
+The planning-oriented outputs of this software are illustrative, have not been
+clinically validated, and must not be used for clinical decision-making. This
+software is not a medical device and carries no regulatory clearance.
