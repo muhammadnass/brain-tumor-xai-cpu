@@ -77,7 +77,7 @@
   },
   "equivalence": {
     "n_synthetic": 4,
-    "n_real": 0,
+    "n_real": 8,
     "worst_max_abs_logit_diff_vs_ablated": 0.0,
     "worst_max_abs_logit_diff_vs_intact": 0.0,
     "total_mask_disagreements_vs_ablated": 0,
@@ -127,33 +127,117 @@
         "mask_disagreements_pruned_vs_ablated": 0,
         "mask_disagreements_pruned_vs_intact": 0,
         "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_132.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_041.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_269.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_441.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_186.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_231.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_323.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
+      },
+      {
+        "input": "BRATS_364.npy",
+        "max_abs_logit_diff_pruned_vs_ablated": 0.0,
+        "max_abs_logit_diff_pruned_vs_intact": 0.0,
+        "bitwise_identical_pruned_vs_ablated": true,
+        "bitwise_identical_pruned_vs_intact": true,
+        "voxels": 2097152,
+        "mask_disagreements_pruned_vs_ablated": 0,
+        "mask_disagreements_pruned_vs_intact": 0,
+        "mask_disagreements_ablated_vs_intact": 0
       }
     ]
   },
   "latency": {
     "intact": {
       "repeats": 5,
-      "median_s": 2.813,
-      "mean_s": 2.8185,
-      "min_s": 2.7179,
-      "max_s": 2.9764,
-      "sd_s": 0.1047
+      "median_s": 2.5045,
+      "mean_s": 2.4953,
+      "min_s": 2.4168,
+      "max_s": 2.5545,
+      "sd_s": 0.051
     },
     "pruned": {
       "repeats": 5,
-      "median_s": 2.2534,
-      "mean_s": 2.2386,
-      "min_s": 2.1863,
-      "max_s": 2.2724,
-      "sd_s": 0.0338
+      "median_s": 2.3096,
+      "mean_s": 2.3025,
+      "min_s": 2.2733,
+      "max_s": 2.3288,
+      "sd_s": 0.0215
     },
-    "median_ratio_pruned_over_intact": 0.8011
+    "median_ratio_pruned_over_intact": 0.9222
   },
-  "saved_model": {
-    "path": "models/segmentation/unet3d_pruned_fold2.pth",
-    "file_bytes": 43904456,
-    "file_mib": 41.87
-  },
+  "saved_model": {},
   "prior_ablation_on_record": {
     "source": "results/metrics/ablation_fold{0,1,2}.json",
     "fold0": {
@@ -180,5 +264,5 @@
     "note": "These three runs established that forcing the bottleneck output to zero changes no prediction on any of the 484 held-out cases. This script establishes that the pruned network reproduces that zero-ablated network exactly. The two together give the pruned network's accuracy on all 484 cases without retraining."
   },
   "interpretation": "The equivalence claim holds if all_outputs_bitwise_identical_to_ablated is true and total_mask_disagreements_vs_intact is zero. The removed stages operate at 4^3 and 8^3 resolution, so the expected gain is in parameter count and stored size rather than latency; report it that way.",
-  "peak_rss_mib": 1595.0
+  "peak_rss_mib": 1893.1
 }

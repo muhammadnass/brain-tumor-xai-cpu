@@ -164,15 +164,16 @@ Two files, with different key names.
 | Bitwise identical | `equivalence.all_outputs_bitwise_identical_to_ablated` | true |
 | BatchNorm diagnostics (Section 4.5) | `bottleneck_batchnorm.bn1` | γ 0.46598, β 3.129 × 10⁻³⁷, running_var 5.605 × 10⁻⁴⁵ |
 
-> **Note on the equivalence inputs.** In the recorded runs, `equivalence.n_real` is 0 and
-> `n_synthetic` is 4: the Decathlon cache had been deleted to free disk space when the
-> pruning was performed, so the bitwise check ran on synthetic volumes of the full
-> 128 × 128 × 128 input shape. The claim that no *real* prediction changes rests on the
-> separate 484-case ablation recorded in `prior_ablation_on_record` (and in
-> `results/metrics/ablation_fold{0,1,2}.json`), where `cases_changed` is 0 and
-> `max_abs_change` is 0.0 for every fold. With the cache restored, re-running
-> `prune_bottleneck.py` picks up `--real-cases 8` and repeats the bitwise check on real
-> volumes.
+**The equivalence inputs.** Each fold is checked on `equivalence.n_real` = 8 held-out
+volumes from that fold plus `equivalence.n_synthetic` = 4 synthetic volumes at the full
+128 × 128 × 128 input shape — 36 comparisons in all. Every one gives a maximum absolute
+logit deviation of 0.0 and zero mask disagreements against *both* the trained network
+and the zero-ablated network, so the three are bitwise identical in output, not merely
+close. The per-input record, with the case identifiers, is in `equivalence.per_input`.
+
+That the result extends to all 484 held-out cases rests on the separate full ablation
+recorded in `prior_ablation_on_record` (and in `results/metrics/ablation_fold{0,1,2}.json`),
+where `cases_changed` is 0 and `max_abs_change` is 0.0 for every fold.
 
 **Latency** — `results/metrics/pruned_latency_fold{0,1,2}.json`:
 
