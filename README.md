@@ -1,5 +1,7 @@
 # Resource-Efficient, Multi-Method Explainable AI for Brain Tumor Segmentation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24322859.svg)](https://doi.org/10.5281/zenodo.24322859)
+
 Reference implementation and reproduction materials for the manuscript
 *"Resource Efficient, Multi-Method Explainable AI for Brain Tumor Segmentation with
 Cross-Population Validation"* (submitted to **IEEE Access**, manuscript ID
@@ -248,7 +250,7 @@ No patient data is contained in this repository.
 Code is released under the MIT Licence (see [`LICENSE`](LICENSE)). The datasets carry
 their own separate licences and access terms, described in Section 1.
 
-Citation metadata is in [`CITATION.cff`](CITATION.cff). Please cite the manuscript:
+This repository is archived at Zenodo: [`10.5281/zenodo.24322859`](https://doi.org/10.5281/zenodo.24322859). Citation metadata is in [`CITATION.cff`](CITATION.cff). Please cite the manuscript:
 
 > R. A. Rasheed, M. S. Nasir, A. Kamsin, and N. J. Ismail, "Resource Efficient,
 > Multi-Method Explainable AI for Brain Tumor Segmentation with Cross-Population

@@ -9,6 +9,11 @@ abstract: >-
 type: software
 license: MIT
 repository-code: "https://github.com/muhammadnass/brain-tumor-xai-cpu"
+doi: "10.5281/zenodo.24322859"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24322859"
+    description: "Archived snapshot of the v1.0.0 release"
 authors:
   - family-names: Rasheed
     given-names: Rasheed Abubakar
