@@ -27,6 +27,7 @@ results/*
 !results/metrics/
 results/metrics/*
 !results/metrics/*.json
+!results/metrics/README.md
 *.progress.jsonl
 logs/
 *.log
